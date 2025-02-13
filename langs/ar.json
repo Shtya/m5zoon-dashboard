@@ -1,0 +1,118 @@
+{
+    "sidebar": {
+        "dashboard": "لوحة التحكم",
+        "my_account": "حسابي",
+        "products": "المنتجات",
+        "financial_transactions": "المعاملات المالية",
+        "my_withdrawals": "مسحوباتي",
+        "new_withdrawal": "سحب جديد",
+        "account_balance": "رصيد الحساب",
+        "notifications": "الإشعارات",
+        "support_requests": "طلبات الدعم",
+        "inventory_report": "تقرير المخزون",
+        "pricing_plans": "خطط الأسعار",
+        "call_center_fees": "رسوم مركز الاتصال",
+        "shipping_fees": "رسوم الشحن",
+        "service_invoices": "فواتير الخدمة",
+        "technical_support": "الدعم الفني",
+        "logout": "تسجيل خروج",
+        "account_manager": "مدير حسابك",
+        "name": "الاسم :",
+        "forContact": "للتواصل :",
+        "contact_us": "تواصل الآن"
+    },
+
+    "supplierName": "يسرا علام",
+    "welcomeMessage": "هلا فيك ،",
+    "mainBranch": "الفرع الرئيسي",
+    "addOrder": "اضف طلبات",
+    "platformDescription": "منصة تقدم جميع خدمات التجارة الإلكترونية في الخليج",
+
+    "dashboard": {
+        "filters": {
+            "this_year": "هذه السنة",
+            "this_month": "هذا الشهر",
+            "last_7_days": "أخر 7 أيام",
+            "yesterday": "أمس",
+            "today": "اليوم",
+            "all": "الكل"
+        },
+
+        "dashboard": {
+            "search_placeholder": "ابحث عن منتج...",
+            "control_panel": "لوحة التحكم",
+            "home": "الرئيسية",
+            "products": "المنتجات"
+        },
+
+        "search": { "choose_date": "اختر التاريخ", "choose_platform": "اختر المنصة", "search_product": "ابحث عن منتج", "update": "تحديث", "search_now": "ابحث الان", "selected_date": "2/2/2025" },
+
+        "statics": {
+            "title": "ملخص طلباتك مع مخزون",
+            "product": "المنتجات",
+            "all_orders": "جميع الطلبات",
+            "valid_orders": "الطلبات الصحيحة",
+            "confirmed_orders": "طلبات تم تأكيدها",
+            "delivered_orders_confirmed": "تم التوصيل من التاكيد",
+            "delivered_orders_total": "تم التوصيل من اجمالي الطلبات",
+            "orders_in_delivery": "طلبات جاري توصيلها",
+            "new_order": "طلب جديد",
+            "unconfirmed_order": "طلب لا يرد للتاكيد",
+            "no_response": "لايرد وجاري المتابعة",
+            "postponed": "مؤجل ليوم ما",
+            "awaiting_stock_renewal": "في انتظار تجديد الاستوك",
+            "canceled_orders_under_review": "طلبات ملغي وجاري المتابعه",
+            "canceled_order": "طلب ملغي",
+            "returned_order": "طلب مرتجع",
+            "out_of_delivery_zone": "خارج نطاق التوصيل",
+            "unable_to_contact": "عدم إمكانيه التواصل",
+            "duplicate_order": "طلب مكرر",
+            "value_price": "قيمته :"
+        },
+
+        "earnings_by_country": {
+            "title": "اجمالي الارباح في الدول",
+            "date": "مايو ٢٠٢٤",
+            "uae": "الإمارات",
+            "saudi_arabia": "السعودية",
+            "jordan": "الأردن"
+        },
+        "platform_orders": {
+            "order" : "طلب" ,
+            "title": "معدل طلبات المنصات",
+            "date": "مايو ٢٠٢٤",
+            "snapchat": "سناب شات",
+            "instagram": "انستجرام",
+            "tiktok": "تيك توك",
+            "facebook": "فيس بوك",
+            "google": "جوجل"
+        },
+
+        "account_summary": {
+          "title": "ملخص حسابك مع مخزون",
+          "returns": "المرتجعات",
+          "withdrawn_profits": "أرباح تم سحبها",
+          "profits_with_makhzon": "أرباحك مع مخزون",
+          "pending_stock_replenishment": "فى انتظار تعبئة المخزون",
+          "total_products": "اجمالي المنتجات",
+          "total_stock": "إجمالي المخزون"
+        },
+
+
+        "tables3" : {
+          "title1" : "المنتجات الاكثر مبيعا" ,
+          "title2" : "إجمالي الرسوم" ,
+          "title3" : "بيانات المخزون" ,
+          "remain" : "متبقي :",
+          "piece" : "قطعة"
+        }
+    },
+
+
+
+    "currency" : {
+      "jordan_currency" : "ج.م" ,
+      "saudi_currency" : "ر.س" ,
+      "uaee_currency" : "د.أ" 
+    }
+}
