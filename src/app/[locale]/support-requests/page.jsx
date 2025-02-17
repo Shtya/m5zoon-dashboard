@@ -10,8 +10,8 @@ import { productStatusOptions, socialMediaPlatforms } from '@/seed';
 import { useTranslations } from 'next-intl'
 import Image from 'next/image';
 import React from 'react'
-import productsTable from '../../../../tables/products';
-import SupportRequestsTable from '../../../../tables/SupportRequests';
+import productsTable from '../../../tables/products';
+import SupportRequestsTable from '../../../tables/SupportRequests';
 import PopupSuportRequest from '@/components/popupContent/PopupSuportRequest';
 import { useGlobalContext } from '@/context/GlobalContext';
 import Popup from '@/components/molecules/Popup';

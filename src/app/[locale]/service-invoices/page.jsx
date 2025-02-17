@@ -8,7 +8,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Select from '@/components/atoms/Select';
 import { FadeDate } from '@/seed';
-import InvoicesTable from '../../../../tables/Invoices';
+import InvoicesTable from '../../../tables/Invoices';
 
 export default function page() {
     const t = useTranslations('callCenter');

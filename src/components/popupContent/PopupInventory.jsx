@@ -5,8 +5,8 @@ import Image from 'next/image'
 import { hookSignUp } from '@/hooks/hookSignUp'
 import Input from '../atoms/Input'
 import Table from '../templates/Table'
-import InventoryTable from '../../../tables/inventory'
-import InnerInventoryTable from '../../../tables/InnerInventory'
+import InventoryTable from '../../tables/inventory'
+import InnerInventoryTable from '../../tables/InnerInventory'
 
 export default function PopupInventory({id}) {
 	const t = useTranslations("inventory")

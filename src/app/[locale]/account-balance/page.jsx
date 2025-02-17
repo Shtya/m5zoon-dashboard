@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import Popup from '@/components/molecules/Popup';
 import PopupWithdrow from '@/components/popupContent/PopupWithdrow';
-import AccountBalanceTable from '../../../../tables/AccountBalance';
+import AccountBalanceTable from '../../../tables/AccountBalance';
 import Image from 'next/image';
 
 export default function page() {
