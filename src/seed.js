@@ -78,3 +78,44 @@ export const DataStoreData = [
 	{ currency : "piece" , price : 150 , avrage : "15.25" , unit : "down" , icon : "/icons/test/12.png" , name : "عدد القطع المباعه" },
 ]
 
+
+
+
+export const productStatusOptions = [
+	{ name: "available", value: "متاح" },
+	{ name: "out_of_stock", value: "غير متوفر" },
+	{ name: "coming_soon", value: "قريبًا" },
+	{ name: "discontinued", value: "متوقف" },
+	{ name: "pending", value: "قيد المراجعة" },
+	{ name: "draft", value: "مسودة" },
+  ];
+
+
+  export const FadeDate = [
+	{ name: "10/2/2020", value: "10/2/2020" },
+	{ name: "11/2/2020", value: "11/2/2020" },
+	{ name: "12/2/2020", value: "12/2/2020" },
+	{ name: "13/2/2020", value: "13/2/2020" },
+	{ name: "14/2/2020", value: "14/2/2020" },
+	{ name: "15/2/2020", value: "15/2/2020" },
+	{ name: "16/2/2020", value: "16/2/2020" },
+	{ name: "17/2/2020", value: "17/2/2020" },
+	{ name: "18/2/2020", value: "18/2/2020" },
+	{ name: "19/2/2020", value: "19/2/2020" }
+  ];
+  
+
+
+  export const withdrawalTypes = [
+	{ value :  "Bank Transfer",  name : "Bank Transfer" },
+	{ value :  "Cash Pickup",  name : "Cash Pickup" },
+	{ value :  "PayPal",  name : "PayPal" },
+	{ value :  "Western Union",  name : "Western Union" },
+	{ value :  "Crypto Wallet",  name : "Crypto Wallet" },
+	{ value :  "Mobile Wallet",  name : "Mobile Wallet" },
+	{ value :  "Check Payment",  name : "Check Payment" },
+	{ value :  "Gift Card",  name : "Gift Card" },
+	{ value :  "Online Payment Gateway",  name : "Online Payment Gateway" },
+	{ value :   "Wire Transfer", name :  "Wire Transfer" }
+  ];
+  

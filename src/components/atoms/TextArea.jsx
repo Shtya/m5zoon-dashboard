@@ -7,11 +7,11 @@ export default function TextArea({ delay , place , dataAos ,  error , cnInput , 
 
 
 	return (
-	<div data-aos={dataAos} data-aos-delay={delay} className={`${classname} flex flex-col  gap-[5px]  relative `} >
-		{label && <label htmlFor={KEY} className={`h5 ${cnLabel}`} > {label} </label> }
+	<div data-aos={dataAos} data-aos-delay={delay} className={`${classname} flex flex-col  gap-[15px]  relative `} >
+		{label && <label htmlFor={KEY} className={`text-[#3e4c5b] text-lg font-normal${cnLabel}`} > {label} </label> }
 		
 		<div className={`rounded-[8px] border border-[#7d7d7d]/20 w-full overflow-hidden text-xl h-[90px]  ${cnInput} `} >
-			<textarea className={` placeholder:text-[#979797]/60 text-[#555]  p-[10px] h-full w-full font-normal outline-none `} {...register} id={KEY} placeholder={place} />
+			<textarea className={` text-[#637381] text-base   p-[10px] h-full w-full font-normal bg-transparent outline-none `} {...register} id={KEY} placeholder={place} />
 		</div>
 		{error && <div className='error ' > {t(error?.message)} </div>}
 	</div>

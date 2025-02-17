@@ -1,5 +1,6 @@
 import Layout from '@/components/templates/Layout';
 import "./style.css"
+import "./fonts.scss"
 
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 
@@ -35,7 +36,7 @@ export default function RootLayout({ children, params: { locale } }) {
 
     return (
         <html lang={locale} dir={locale == 'en' ? 'ltr' : 'rtl'}>
-            <body>
+            <body >
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <main>
                         <Layout>{children}</Layout>

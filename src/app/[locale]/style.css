@@ -3,42 +3,12 @@
 @tailwind utilities;
 
 
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Cairo:200,300,regular,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Almarai:300,regular,700,800);
-@import url(https://fonts.googleapis.com/css?family=Cantata+One:regular);
-
-
-@font-face {
-  font-family: 'Norsal';
-  src: url('/fonts/alfont_com_NorsalGX.ttf') format('truetype');
-  font-weight: 100 900; /* Supports variable font weights */
-  font-style: normal;
-}
-
-
-
-.almarai {
-  font-family: "Almarai" !important;
-  
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-
-[dir="ltr"] *  {
-  font-family: "Cantata One", serif !important ;
-}
-
-
-[dir="rtl"] * {
-  font-family: "Almarai", sans-serif !important ;
-  /* font-family: 'Norsal', sans-serif; */
-}
 
 
 
@@ -66,9 +36,14 @@ body {
 }
 
 .cShadow {
-  @apply shadow-sm
+  @apply shadow-sm !p-[30px] !py-[40px]
   /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12),  0 4px 8px rgba(0, 0, 0, 0.08); */
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08), 0 2px 5px rgba(0, 0, 0, 0.06); */
+}
+
+.p10 {
+  padding-top: 10px !important ;
+  padding-bottom: 10px !important ;
 }
 
 
@@ -101,6 +76,8 @@ body {
     .t35 { font-size: clamp(33px, 2vw, 35px); }
   }
   
+
+
 
 /*  Scroll  */
 ::-webkit-scrollbar {

@@ -19,7 +19,8 @@
         "account_manager": "مدير حسابك",
         "name": "الاسم :",
         "forContact": "للتواصل :",
-        "contact_us": "تواصل الآن"
+        "contact_us": "تواصل الآن",
+        "cost_calculator": "حاسبة التكاليف"
     },
 
     "supplierName": "يسرا علام",
@@ -78,7 +79,7 @@
             "jordan": "الأردن"
         },
         "platform_orders": {
-            "order" : "طلب" ,
+            "order": "طلب",
             "title": "معدل طلبات المنصات",
             "date": "مايو ٢٠٢٤",
             "snapchat": "سناب شات",
@@ -89,30 +90,250 @@
         },
 
         "account_summary": {
-          "title": "ملخص حسابك مع مخزون",
-          "returns": "المرتجعات",
-          "withdrawn_profits": "أرباح تم سحبها",
-          "profits_with_makhzon": "أرباحك مع مخزون",
-          "pending_stock_replenishment": "فى انتظار تعبئة المخزون",
-          "total_products": "اجمالي المنتجات",
-          "total_stock": "إجمالي المخزون"
+            "title": "ملخص حسابك مع مخزون",
+            "returns": "المرتجعات",
+            "withdrawn_profits": "أرباح تم سحبها",
+            "profits_with_makhzon": "أرباحك مع مخزون",
+            "pending_stock_replenishment": "فى انتظار تعبئة المخزون",
+            "total_products": "اجمالي المنتجات",
+            "total_stock": "إجمالي المخزون"
         },
 
-
-        "tables3" : {
-          "title1" : "المنتجات الاكثر مبيعا" ,
-          "title2" : "إجمالي الرسوم" ,
-          "title3" : "بيانات المخزون" ,
-          "remain" : "متبقي :",
-          "piece" : "قطعة"
+        "tables3": {
+            "title1": "المنتجات الاكثر مبيعا",
+            "title2": "إجمالي الرسوم",
+            "title3": "بيانات المخزون",
+            "remain": "متبقي :",
+            "piece": "قطعة"
         }
     },
 
+    "products": {
+        "add_product": "إضافة منتج",
+        "search_placeholder": "ابحث عن ما تريد...",
+        "total_products": 1500,
+        "products": "المنتجات",
+        "product_status": "حالة المنتج",
+        "update": "تحديث",
+        "search_now": "ابحث الان",
+        "pending": "قيد الانتظار",
 
+        "action": "اجراء",
+        "status": "الحالة",
+        "on_shelf": "مخزون علي الرف",
+        "sold_pieces": "عدد قطع مباعة",
+        "with_shipping_companies": "مخزون مع شركات الشحن",
+        "returned": "مرتجع",
+        "in_progress": "طلبات قيد التنفيذ",
+        "manufacturing": "التصنيع",
+        "categories": "الاقسام",
+        "wholesale_price": "سعر الجملة",
+        "sku_code": "كود المنتج SKU",
+        "name": "اسم",
+        "number": "رقم",
+        "provide": "تغزية المخزون",
 
-    "currency" : {
-      "jordan_currency" : "ج.م" ,
-      "saudi_currency" : "ر.س" ,
-      "uaee_currency" : "د.أ" 
+        "inventory_feeding": "تغذية المخزون",
+        "feeding_record": "سجل التغذية",
+        "product_details": {
+            "title": "تفاصيل المنتج",
+            "product_name": "اسم المنتج",
+            "product": "منتج",
+            "pieces_count": "عدد القطع",
+            "quantity": 2000
+        },
+        "confirmation": "تأكيد"
+    },
+
+    "support-requests": {
+        "new_order": "طلب جديد",
+        "search_placeholder": "ابحث عن ما تريد...",
+        "order_quantity": 1500,
+        "support_orders": "طلبات الدعم",
+        "action": "اجراء",
+        "order_status": "حالة الطلب",
+        "order_id": "ID الطلب",
+
+        "new_support_request": "طلب دعم جديد",
+        "customer_name": "الاسم",
+        "support_request": "طلب دعم",
+        "message_content": "محتوى الرسالة",
+        "example_content": "اى محتوى هنا",
+        "save": "حفظ"
+    },
+
+    "my-withdrawals": {
+        "action": "اجراء",
+        "payment_proof": "إثبات الدفع",
+        "search_placeholder": "ابحث عن ما تريد...",
+        "account_type": "نوع الحساب",
+        "account_number": "رقم الحساب",
+        "my_withdrawals": "مسحوباتي",
+        "new_withdrawal": "سحب جديد",
+        "withdrawal_type": "نوع السحب ",
+        "bank_transfer": "تحويل بنكى",
+        "withdrawal_balance": "الرصيد ",
+        "amount": "2000",
+        "confirm_withdrawal": "تأكيد السحب",
+
+        "notes": "ملاحظات",
+        "status": "الحالة",
+        "balance": "الرصيد",
+        "date": "التاريخ",
+        "account_id": "ID الحساب",
+        "total_earnings": "اجمالي الارباح",
+        "total_balance": "إجمالي الرصيد",
+        "total_balance_value": "10000 ر.س",
+        "pending_balance": "رصيد قيد المراجعة",
+        "withdrawable_balance": "رصيد قابل للسحب",
+        "withdrawn_balance": "رصيد تم سحبه",
+        "withdrawn_balance_value": "500 ر.س",
+        "pending_balance_value": "3000 ر.س",
+        "total_balance_value_2": "10000 ر.س",
+        "search_value": "1500",
+        "account_balance": "رصيد حساب"
+    },
+    "account": {
+        "email": "البريد الالكتروني",
+        "name": "الاسم",
+        "whatsapp_number": "رقم الواتساب",
+        "phone_number": "رقم الهاتف",
+        "product_type": "نوع المنتجات",
+        "password": "كلمة المرور",
+        "address": "العنوان",
+        "country": "الدولة",
+        "profile_picture": "الصورة المستخدمة",
+        "edit": "تعديل",
+        "my_account": "حسابي",
+        "main": "الرئيسية ",
+        "payment_info": "بيانات الدفع",
+        "profile": "الملف الشخصي",
+
+        "account_number": "رقم الحساب",
+        "iban_number": "رقم IBAN",
+        "bank_name": "اسم البنك",
+        "bank_branch": "فرع البنك",
+
+        "wallet_id": "رقم المحفظة",
+        "full_name": "اسمك بالكامل",
+        "paypal_email": "البريد الإلكتروني لحساب PayPal",
+        "card_number": "رقم البطاقة",
+        "card_holder": "اسم حامل البطاقة",
+        "expiry_date": "تاريخ انتهاء الصلاحية",
+        "cvv": "رمز الأمان",
+        "transaction_id": "رقم المعاملة",
+        "receiver_name": "اسم المستلم",
+        "sender_name": "اسم المرسل"
+    },
+
+    "callCenter": {
+        "new_center": "مركز جديد",
+        "call_centers": "مراكز الاتصال",
+        "from_date": "من تاريخ",
+        "to_date": "إلى تاريخ",
+        "update": "تحديث",
+        "search_now": "ابحث الآن",
+        "replied_fee": "رسوم تم الرد",
+        "confirmed_fee": "رسوم تم التأكيد",
+        "received_orders_fee": "رسوم الطلبات المستلمة",
+        "upsell_fee": "رسوم أب سيل",
+        "monthly_fee": "الرسوم الشهرية",
+        "fee_cost": "تكلفة الرسوم",
+        "total": "اجمالي تكلفة الرسوم",
+        "shipping-fees": "رسوم الشحن",
+        "order_number": "رقم الطلب",
+        "shipping_cost": "تكلفة الشحن ",
+        "shipping_cost_return": "تكلفة المرتجع ",
+        "shipping_fee_receive": "رسوم الدفع عند الاستلام ( COD ) ",
+
+        "invoices": "فواتير الخدمة ",
+        "invoice_number": "رقم الفاتورة",
+        "status": "الحالة",
+        "invoice_value_sar": "قيمة الفاتورة بالريال",
+        "invoice_value_usd": "قيمة الفاتورة($)",
+        "country": "الدولة",
+        "start_date": "تاريخ البداية",
+        "end_date": "تاريخ النهاية",
+        "download_invoice": "حمل الفاتورة"
+    },
+
+    "inventory": {
+        "all_orders": "جميع الطلبات",
+        "orders_in_progress": "طلبات قيد التنفيذ",
+        "stock_in_shipping_companies": "المخزون في شركات الشحن",
+        "stock_on_shelf": "المخزون علي الرف",
+        "remaining_stock": "المتبقي من المخزون",
+        "sold_items": "القطع المباعه",
+        "total_stock": "اجمالي المخزون",
+        "product_name": "اسم الصنف",
+        "inventory_reports": "تقارير مخزون المنتجات",
+        "action": "اجراء",
+
+        "shipping_stock": "المخزون في شركات الشحن",
+        "total": "الاجمالي",
+        "status": "الحالة",
+        "products": "المنتجات",
+        "date": "التاريخ",
+        "product_name2": "اسم المنتج",
+        "product_id": "ID"
+    },
+
+    "notifications": {
+        "title": "الإشعارات",
+        "clear_all": "مسح الكل",
+        "mark_all_as_read": "تحديد الكل كمقروء",
+        "select_all": "تحديد الكل",
+        "return": "تراجع عن الامر"
+    },
+
+    "currency": {
+        "jordan_currency": "ج.م",
+        "saudi_currency": "ر.س",
+        "uaee_currency": "د.أ"
+    },
+
+    "costCalculator": {
+        "title1": "المنتجات والنفقات",
+        "title2": "إحصائيات الطلبات",
+        "title3": "رسوم الاتصال & الشحن",
+        "calculate_result": "احسب النتيجة",
+        "save": "حفظ",
+        "cost_calculator": "حاسبة التكاليف",
+        "home": "الرئيسية",
+        "product_cost": "تكلفة المنتج",
+        "additional_selling_cost": "تكلفة البيع الاضافى",
+        "cpl": "CPL",
+        "local_price": "السعر المحلى",
+        "usd_price": "السعر USD",
+        "additional_local_price": "السعر الاضافى المحلى",
+        "additional_usd_price": "السعر الاضافىUSD",
+        "confirmed": "تم التأكيد",
+        "delivered": "التوصيل",
+        "returned": "المرتجع",
+        "sold": "تم البيع",
+        "ldr": "LDR",
+        "connection_shipping_fees": "رسوم الاتصال & الشحن",
+        "product_type": "نوع المنتج",
+        "received_orders": "الطلبات المستلمة",
+        "confirmed_orders": "الطلبات الموكدة",
+        "unconfirmed_orders": "الطلبات الغير موكدة",
+        "sold_orders": "الطلبات المباعة",
+        "returned_orders": "الطلبات المرتجعة",
+        "orders_cost_delivered": "تكلفة الطلبات( التي تم توصيلها)",
+        "shipping_fees": "رسوم الشحن",
+        "call_centers": "مراكز الاتصال",
+        "storage_fees": "رسوم مخزون",
+        "unconfirmed_orders_count": "الطلبات الغير مؤكدة",
+        "advertisement_costs": "تكاليف الاعلانات",
+        "total_orders": "الطلبات المؤكدة",
+        "total_products": "إجمالي المنتجات",
+        "free_shipping": "شحن مجاني",
+        "total_received_orders": "الطلبات المستلمة",
+        "total_amount": "إجمالي المبلغ",
+        "total_profit": "إجمالي الربح",
+        "profit_per_delivered_order": "ربح كل طلب تم توصيله",
+        "total_sales": "إجمالي المبيعات",
+        "price" : "{count} درهم",
+        "summary" : "ملخص التكاليف"
     }
 }

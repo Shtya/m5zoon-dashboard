@@ -7,23 +7,8 @@ import Translate from '../atoms/Translate'
 export default function Navbar() {
 	const t = useTranslations("")
 
-
-	/* 
-	
-        "newOrder": "طلب جديد",
-        "searchPlaceholder": "ابحث عن ما تريد...",
-        "supportRequests": {
-          "totalRequests": 1500,
-          "title": "طلبات الدعم",
-          "actions": "اجراء",
-          "orderStatus": "حالة الطلب",
-          "customerName": "الاسم",
-          "orderID": "ID الطلب"
-        }
-		  
-		*/
   return (
-	<div className=' cShadow flex  bg-white  items-center justify-between gap-[20px] p-[10px] px-[20px] rounded-[10px] mt-[10px] ' >
+	<div className=' cShadow p10 flex  bg-white  items-center justify-between gap-[20px] p-[10px] px-[20px] rounded-[10px] mt-[10px] ' >
 		<div className='@max-xl:hidden ' >
 			<h3 className='text-[#242b33] text-2xl font-bold ' > {t("welcomeMessage")} يسرا علام 👋 </h3>
 			<p className='text-[#868686] text-base font-normal' > {t("platformDescription")} </p>
@@ -38,7 +23,7 @@ export default function Navbar() {
 				<Image className='rtl:ml-[10px] ltr:mr-[10px] ' alt='' src={"/icons/moon.png"} width={22} height={22} />
 
 				<div className=" flex items-center cursor-pointer hover:scale-[.98] duration-300 gap-[5px]  ">
-					<Image alt='' src={"/icons/avatar.png"} width={45} height={45} />
+					<Image className=' rounded-full ' alt='' src={"/icons/avatar.png"} width={45} height={45} />
 					<div className='flex-col flex items-center @max-xl:hidden ' >
 						<span className='text-[#202020] text-base font-bold' > يسرا علام </span>
 						<span className='text-[#8f8f8f] text-sm font-normal ' > {t("mainBranch")} </span>
