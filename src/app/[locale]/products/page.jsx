@@ -10,7 +10,7 @@ import { productStatusOptions, socialMediaPlatforms } from '@/seed';
 import { useTranslations } from 'next-intl'
 import Image from 'next/image';
 import React, { useState } from 'react'
-import productsTable from '../../../tables/products';
+import productsTable from '@/tables/products';
 import PopupProducts from '@/components/popupContent/PopupProducts';
 import Popup from '@/components/molecules/Popup';
 

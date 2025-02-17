@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from '@/navigation';
+import { useRouter } from '@/i18n/routing';
 import Image from 'next/image';
 import React from 'react';
 

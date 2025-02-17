@@ -9,7 +9,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image';
 import React, { useState } from 'react'
 import Popup from '@/components/molecules/Popup';
-import MyWithdrawalsTable from '../../../tables/MyWithdrawals';
+import MyWithdrawalsTable from '@/tables/MyWithdrawals';
 import PopupWithdrow from '@/components/popupContent/PopupWithdrow';
 
 export default function page() {

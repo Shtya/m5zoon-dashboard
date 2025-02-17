@@ -5,10 +5,7 @@ import Table from '@/components/templates/Table';
 import { hookSignUp } from '@/hooks/hookSignUp';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-import Image from 'next/image';
-import Select from '@/components/atoms/Select';
-import { FadeDate } from '@/seed';
-import InventoryTable from '../../../tables/inventory';
+import InventoryTable from '@/tables/inventory';
 import PopupInventory from '@/components/popupContent/PopupInventory';
 import Popup from '@/components/molecules/Popup';
 

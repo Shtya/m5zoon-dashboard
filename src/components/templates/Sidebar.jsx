@@ -1,10 +1,11 @@
 'use client';
-import { Link, usePathname } from '@/navigation';
+// import { Link, usePathname } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Button from '../atoms/Button';
 import { Maximize2 } from 'lucide-react';
+import { Link, usePathname } from '@/i18n/routing';
 
 export default function Sidebar() {
     const t = useTranslations('sidebar');

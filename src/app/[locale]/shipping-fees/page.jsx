@@ -9,8 +9,8 @@ import Image from 'next/image';
 import Select from '@/components/atoms/Select';
 import { FadeDate } from '@/seed';
 import Title from '@/components/pages/common/Title';
-import CallCenterFeeTable from '../../../tables/CallCenterFee';
-import ShippingFeeTable from '../../../tables/ShippingFees';
+import CallCenterFeeTable from '@/tables/CallCenterFee';
+import ShippingFeeTable from '@/tables/ShippingFees';
 
 export default function page() {
     const t = useTranslations('callCenter');

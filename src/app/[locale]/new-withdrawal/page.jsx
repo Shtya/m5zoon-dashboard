@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import PopupSuportRequest from '@/components/popupContent/PopupSuportRequest';
 import { useGlobalContext } from '@/context/GlobalContext';
 import Popup from '@/components/molecules/Popup';
-import MyWithdrawalsTable from '../../../tables/MyWithdrawals';
+import MyWithdrawalsTable from '@/tables/MyWithdrawals';
 import PopupWithdrow from '@/components/popupContent/PopupWithdrow';
 import Select from '@/components/atoms/Select';
 import { withdrawalTypes } from '@/seed';

@@ -4,7 +4,7 @@ import Footer from './Footer';
 import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { usePathname } from '@/navigation';
+import { usePathname } from '@/i18n/routing';
 import Navbar from './Navbar';
 import { GlobalProvider } from '@/context/GlobalContext';
 
