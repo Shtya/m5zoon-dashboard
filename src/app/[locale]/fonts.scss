@@ -6,10 +6,10 @@
 
 
 
-[dir='ltr'] body {
+[dir='ltr'] body , [dir='ltr'] * {
     font-family: 'Cantata One', serif !important ;
 }
 
-[dir='rtl'] body {
-    font-family: 'Almarai', 'Cairo';
+[dir='rtl'] body , [dir='rtl'] * {
+    font-family: 'Almarai', 'Cairo' !important;
 }

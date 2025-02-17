@@ -28,10 +28,6 @@ module.exports = {
   prefix: '',
   theme: {
     extend: {
-      fontFamily: {
-        almarai: ['Almarai', 'sans-serif'],
-        cantata: ['Cantata One', 'serif'],
-      },
       colors: {
         primary: '#F9A51A',
         secondery: '#09396F',
