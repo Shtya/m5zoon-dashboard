@@ -1,8 +1,6 @@
 'use client';
-import Button from '@/components/atoms/Button';
 import ButtonIcon from '@/components/atoms/ButtonIcon';
 import Table from '@/components/templates/Table';
-import { hookSignUp } from '@/hooks/hookSignUp';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
 import InventoryTable from '@/tables/inventory';
@@ -11,7 +9,6 @@ import Popup from '@/components/molecules/Popup';
 
 export default function page() {
     const t = useTranslations('inventory');
-    const { register, errors, trigger, clearErrors, setError, getValues, setValue, submit, watch, reset } = hookSignUp();
     const { headContent, data } = InventoryTable();
 
     //! popup
