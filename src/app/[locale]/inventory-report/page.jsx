@@ -3,7 +3,7 @@ import ButtonIcon from '@/components/atoms/ButtonIcon';
 import Table from '@/components/templates/Table';
 import { useTranslations } from 'next-intl';
 import React, { useState } from 'react';
-import InventoryTable from '@/tables/inventory';
+import InventoryTable from '@/tables/Inventory';
 import PopupInventory from '@/components/popupContent/PopupInventory';
 import Popup from '@/components/molecules/Popup';
 

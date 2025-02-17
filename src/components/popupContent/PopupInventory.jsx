@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl'
-import { hookSignUp } from '@/hooks/hookSignUp'
 import Table from '../templates/Table'
 import InnerInventoryTable from '@/tables/InnerInventory'
 
