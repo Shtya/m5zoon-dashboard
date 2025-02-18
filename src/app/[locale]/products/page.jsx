@@ -16,7 +16,6 @@ import Popup from '@/components/molecules/Popup';
 
 export default function page() {
 	const t = useTranslations("products")
-	const t_ = useTranslations("dashboard")
 	const { register, errors, trigger, clearErrors, setError, getValues, setValue, submit, watch, reset } = hookSignUp();
 	const {headContent , productsData} = productsTable()
 
@@ -39,10 +38,8 @@ export default function page() {
 					<ButtonIcon icon={"/icons/pdf.png"} />
 					<ButtonIcon icon={"/icons/print.png"} />
 					<ButtonIcon icon={"/icons/copy.png"} />
-					<Button order={"order-[-1]  "} cn={"bg-secondery  "}  name={t("add_product")} icon={<Image src={"/icons/plus.png"} alt='' width={20} height={20} />} />
+					<Button href={"/products/add"} order={"order-[-1]  "} cn={"bg-secondery  "}  name={t("add_product")} icon={<Image src={"/icons/plus.png"} alt='' width={20} height={20} />} />
 				</div>
-
-                {/* <SelectButton data={filtersData} /> */}
             </div>
 
 
@@ -64,9 +61,9 @@ export default function page() {
 
 			{/*  Table  */}
 			<div className='cShadow   min-h-[100px]  bg-white p-[20px] rounded-[10px] ' >
-				<Table nameEditBtn={t('provide')} head={headContent} data={productsData} onOpen={() => setisOpenPopup(true)} />
+				<Table showHref={"/products/show"} editHref={"/products/edit"} nameEditBtn={t('provide')} head={headContent} data={productsData} onOpen={() => setisOpenPopup(true)} />
 			</div>
-			<Popup title={t('provide')} isOpen={isOpenPopup} onClose={() => setisOpenPopup(false)} content={ <PopupProducts /> } />
+			<Popup  title={t('provide')} isOpen={isOpenPopup} onClose={() => setisOpenPopup(false)} content={ <PopupProducts /> } />
 
 
 

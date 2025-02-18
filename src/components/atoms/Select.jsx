@@ -40,7 +40,7 @@ const Select = ({cnSelect ,label , cnInput , iconSelect , dataAos , delay  , err
     <div ref={selectRef} data-aos={dataAos} data-aos-delay={delay}  className={`${cn} select z-[100] relative flex  flex-col gap-[15px]  w-full `}>
       {label && <label htmlFor={KEY} className={` text-[#3e4c5b] text-lg font-normal `} > {label} </label> }
 
-      <div onClick={() => setShow(!show)} className={` ${cnSelect} px-[10px] rounded-lg border border-[#ececeb] duration-300 cursor-pointer w-full h-[55px] flex justify-between items-center`}>
+      <div onClick={() => setShow(!show)} className={` ${cnSelect} px-[10px] rounded-lg border border-[#ececeb] duration-300 cursor-pointer w-full min-h-[55px] flex justify-between items-center`}>
         <div className='flex items-center gap-[9px] '>
             {val?.icon && <Image className=' flex-none w-[20px] h-[20px] object-cover rounded-[50%] ' src={val?.icon} alt='' width={20} height={20} />}
             <div className={` ${cnInput}  text-sm font-normal text-[#6b6b6b]`}> {val?.name || place} </div>

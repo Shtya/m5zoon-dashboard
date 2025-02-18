@@ -45,8 +45,25 @@ body {
   padding-top: 10px !important ;
   padding-bottom: 10px !important ;
 }
+.p20 {
+  padding: 20px !important;
+}
 
 
+.quill {
+  @apply bg-[#f7f7f7] rounded-md border border-[#ebebeb]
+}
+.ql-container {
+  border: none !important;
+  background-color: #f9f9f9;
+  height: 240px !important;
+  font-size: 15px !important;
+}
+
+.ql-toolbar {
+  border: none !important;
+  background-color: #f3f4f6;
+}
 
 @layer components {
     .t11 { font-size: clamp(10px, 2vw, 11px); }

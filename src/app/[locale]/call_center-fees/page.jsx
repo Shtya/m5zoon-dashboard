@@ -72,10 +72,10 @@ export default function page() {
             {/*  Fees  */}
             <div className='cShadow text-white  min-h-[100px]  bg-white p-[20px] rounded-[10px] '>
                 <Title title={t("total")}  />
-                <div className='flex flex-wrap justify-center gap-[20px] '>
+                <div className='grid @lg:grid-cols-2 @xl:grid-cols-3 @2xl:grid-cols-5 gap-[20px] '>
                 {
                     cards?.map((e,i)=> (
-                        <div className={` max-w-[315px] w-full  ${i == 0 &&"bg-secondery  text-white"}  text-[#7a7a7e] min-h-[100px] py-[20px] p-[10px] border-[#EEEEEE] border-[.5px]  rounded-[10px] justify-between items-center inline-flex`}>
+                        <div className={` max-w-full w-full  ${i == 0 &&"bg-secondery  text-white"}  text-[#7a7a7e] min-h-[100px] py-[20px] p-[10px] border-[#EEEEEE] border-[.5px]  rounded-[10px] justify-between items-center inline-flex`}>
                             <div className='flex-col gap-[10px] inline-flex'>
                                 <h3 className=' text-xl font-normal flex items-center gap-[10px] '>
                                     <span style={{background : e.bgSpan}} className={`w-[3px] h-[18px]  rounded-tr-[30px] rounded-bl-[30px]`} /> {e.name}

@@ -1,5 +1,5 @@
+import { Link } from '@/i18n/routing';
 import { ChevronLeft, ChevronsLeft } from 'lucide-react';
-import Link from 'next/link'; 
 
 const Breadcrumb = ({ items }) => {
     return (

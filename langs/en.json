@@ -142,7 +142,11 @@
             "pieces_count": "Pieces Count",
             "quantity": 2000
         },
-        "confirmation": "Confirmation"
+        "confirmation": "Confirmation",
+        "notes": "Notes",
+        "quantity": "Quantity",
+        "feeding_date": "Feeding Date",
+        "product_name": "Product Name"
     },
 
     "support-requests": {

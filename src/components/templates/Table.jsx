@@ -5,7 +5,7 @@ import { CheckBoxTable } from '../atoms/Checkbox';
 import ButtonIcon from '../atoms/ButtonIcon';
 import Button from '../atoms/Button';
 
-const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn }) => {
+const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn , showHref , editHref }) => {
     const statusColors = {
         // blue
         invoice_value_usd : " !text-[#084384] ",
@@ -13,6 +13,10 @@ const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn }) => {
         id : " !text-[#084384] ",
         upsell_fee :  " !text-[#084384] ",
         all_orders : " !text-[#084384] " ,
+        
+        
+        Acceptable : " !text-[#138031] !bg-[#f1fff2] ",
+        Unacceptable : " !text-[#df2727] !bg-[#fff3f1] ",
 
         
         
@@ -134,8 +138,8 @@ const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn }) => {
                 <table className='w-full border-collapse'>
                     <thead>
                         <tr className='text-white text-sm w-full'>
-                            <th className='bg-secondery !px-[10px] '>
-                                <CheckBoxTable onclick={handleCheckAll} KEY={'all'} cn={'border-white z-[100] '} />
+                            <th className='bg-secondery !px-[10px] w-[40px] '>
+                                {/* <CheckBoxTable onclick={handleCheckAll} KEY={'all'} cn={'border-white z-[100] '} /> */}
                             </th>
 
                             {head.map(h => {
@@ -156,14 +160,14 @@ const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn }) => {
                         {paginatedData?.map((product , i) => (
                             <>
                                 <tr   className={` ${i % 2 == 0 ? " bg-[#f7f8fa]" : ""} `} key={product.id} >
-                                    <td className=''>
+                                    <td className=' px-[10px] '>
                                         <CheckBoxTable onclick={handleCheckboxChange} KEY={product.id} cn={'checked:!bg-secondery checked:!border-secondery '} />
                                     </td>
 
                                     {Object.keys(product).map(key =>
                                         !["action" , 'download' , "watch" ].includes(key)? (
                                             <td key={key} className={`p-3 text-center text-[#637381] text-base font-normal ${statusColors[key]}`}>
-                                                {key === 'status' ? <span className={` px-[15px] py-[7px] block !min-w-[60px] w-full  rounded-full text-sm font-medium  ${statusColors[product.status] || 'bg-gray-200 text-gray-700'}`}>{product[key]}</span> : key === 'img' ? <img onClick={() => setshowImg(product[key])} src={product[key]} alt={key} className='w-10 cursor-pointer hover:opacity-85 hover:scale-[.93] duration-300 h-10 rounded-full mx-auto' /> : product[key]}
+                                                {key === 'status' ? <span className={` px-[15px] py-[7px] block !min-w-[60px] !max-w-fit mx-auto w-full  rounded-full text-sm font-medium  ${statusColors[product.status] || 'bg-gray-200 text-gray-700'}`}>{product[key]}</span> : key === 'img' ? <img onClick={() => setshowImg(product[key])} src={product[key]} alt={key} className='w-10 cursor-pointer hover:opacity-85 hover:scale-[.93] duration-300 h-10 rounded-full mx-auto' /> : product[key]}
                                             </td>
                                         ) : null,
                                     )}
@@ -187,8 +191,8 @@ const Table = ({setisOpenPopup , head, data, onOpen, nameEditBtn }) => {
                                 <tr className={`${i % 2 == 0 ? " bg-[#f7f8fa]" : ""} `} >
                                     <td colSpan={Object.keys(product).length + 2}>
                                         <div className={` ${expandedRow === product.id ? 'max-h-[200px] opacity-100 p-[20px] ' : 'max-h-0 opacity-50'} flex items-center gap-[10px] overflow-auto duration-500 translate-x-0 ease-in-out `}>
-                                            <ButtonIcon icon={'/icons/eye.png'} />
-                                            <ButtonIcon icon={'/icons/edit.png'} />
+                                            <ButtonIcon href={showHref ?`${showHref}/${product["id"]}` : "" } icon={'/icons/eye.png'} />
+                                            <ButtonIcon href={editHref ?`${editHref}/${product["id"]}` : "" } icon={'/icons/edit.png'} />
                                             {nameEditBtn && <Button onclick={onOpen} order={'order-[-1]'} cn={'bg-secondery'} name={nameEditBtn} icon={<Image className='flex-none' src={'/icons/plus.png'} alt='' width={25} height={25} />} />}
                                         </div>
                                     </td>

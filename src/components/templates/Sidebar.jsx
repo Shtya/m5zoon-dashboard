@@ -1,6 +1,6 @@
 'use client';
 // import { Link, usePathname } from '@/i18n/routing';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Button from '../atoms/Button';
@@ -11,7 +11,6 @@ export default function Sidebar() {
     const t = useTranslations('sidebar');
     const sidebarItems = [
         { icon: '/icons/sidebar/1.png', href: '/', label: t('dashboard'), key: 'dashboard' },
-        { icon: '/icons/sidebar/18.png', href: '/cost-calculator', label: t('cost_calculator'), key: 'cost_calculator' },
         { icon: '/icons/sidebar/2.png', href: '/my-account', label: t('my_account'), key: 'my_account' },
         { icon: '/icons/sidebar/3.png', href: '/products', label: t('products'), key: 'products' },
         {
@@ -32,8 +31,9 @@ export default function Sidebar() {
         { icon: '/icons/sidebar/12.png', href: '/call_center-fees', label: t('call_center_fees'), key: 'call_center_fees' },
         { icon: '/icons/sidebar/13.png', href: '/shipping-fees', label: t('shipping_fees'), key: 'shipping_fees' },
         { icon: '/icons/sidebar/14.png', href: '/service-invoices', label: t('service_invoices'), key: 'service_invoices' },
-        { icon: '/icons/sidebar/15.png', href: '/technical-support', label: t('technical_support'), key: 'technical_support' },
-        { icon: '/icons/sidebar/16.png', href: '/logout', label: t('logout'), key: 'logout' },
+        // { icon: '/icons/sidebar/15.png', href: '/technical-support', label: t('technical_support'), key: 'technical_support' },
+        // { icon: '/icons/sidebar/16.png', href: '/logout', label: t('logout'), key: 'logout' },
+        { icon: '/icons/sidebar/18.png', href: '/cost-calculator', label: t('cost_calculator'), key: 'cost_calculator' },
     ];
 
     const accountManager = {
@@ -61,6 +61,10 @@ export default function Sidebar() {
     useEffect(() => {
         setMounted(true);
     }, []);
+    const locale = useLocale()
+
+
+    const [showAccountDetails , setShowAccountDetails ] = useState(null)
 
     return (
         <nav className={`  ${expand ? 'w-[65px] ' : 'w-[330px]'} h-[calc(100vh-20px)] relative duration-500 `}>
@@ -101,23 +105,32 @@ export default function Sidebar() {
                                 </div>
                             </Link>
                         ))}
+
+                        <div onClick={() => showAccountDetails == "account" ?  setShowAccountDetails("")  : setShowAccountDetails("account")  } className={` ${showAccountDetails == "account" ? 'bg-[#0b4a90]' : 'hover:shadow-md hover:bg-[#0b4a90] '} cursor-pointer  min-h-[60px]  py-[15px] px-[20px]  text-white transition-colors duration-300 relative `}  >
+                            <div className='flex items-center justify-between w-full' >
+                                <div className='flex gap-[15px] items-center'>
+                                    <Image className='w-[28px] h-[28px] object-contain ' src={"/icons/sidebar/2.png"} alt='' width={30} height={30} />
+                                    <span className={`capitalize ${expand && 'hidden'} `}>{t("account_manager")}</span>
+                                </div>
+                                <Image className={` ${showAccountDetails == "account" ? 'rotate-0' : 'rotate-[-180deg]'} ${expand && 'hidden'}  duration-300`} src={'/icons/arrow-top.png'} alt='' width={20} height={20} />
+                            </div>
+                            <div className={` ${expand && "hidden"} ${showAccountDetails == "account" ? "max-h-[300px] opacity-100 pt-[10px]  " : "max-h-0 opacity-0" }  gap-[10px] px-[20px] flex flex-col overflow-auto ease-in-out transition-all duration-500`} >
+                                <div className="text-white text-sm font-normal"> نور الدين صالح</div>
+                                <div className={`text-white text-sm font-normal  ${locale == "ar" && "text-right" } `} dir={locale == "ar" && "ltr" } > +201002766592</div>
+                            </div>
+                        </div>
+
+
+                        <div  className={`cursor-pointer mt-[30px] mb-[20px]  min-h-[60px]  text-white transition-colors duration-300 relative `}  >
+                                <div className=' rounded-md hover:shadow-md duration-300 flex justify-center gap-[15px] items-center max-w-[80%] mx-auto px-[10px] py-[10px] w-full bg-[#0b4a90] '>
+                                    <Image className='w-[28px] h-[28px] object-contain ' src={"/icons/sidebar/16.png"} alt='' width={30} height={30} />
+                                    <span className={`capitalize ${expand && 'hidden'} `}>{t("logout")}</span>
+                                </div>
+                        </div>
+
+
                     </div>
 
-                    {!expand && (
-                        <div className='info my-[50px] rounded-[8px] bg-[#0b4a90] text-white p-[20px] flex flex-col items-center gap-[10px] max-w-[230px] w-full mx-auto '>
-                            <Image className='' src={accountManager.imgUser} alt='' width={60} height={60} />
-                            <span> {t('account_manager')} </span>
-                            <span>
-                                {' '}
-                                {t('name')} {accountManager.name}{' '}
-                            </span>
-                            <span>
-                                {' '}
-                                {t('forContact')} {accountManager.contact}{' '}
-                            </span>
-                            <Button cn={'bg-white !text-secondery !min-h-[40px] mt-[10px] '} name={t('contact_us')} icon={<Image className='' src={'/icons/whatsapp.png'} alt='' width={15} height={15} />} />
-                        </div>
-                    )}
                 </div>
             </div>
         </nav>

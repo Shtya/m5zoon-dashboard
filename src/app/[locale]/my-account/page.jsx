@@ -12,7 +12,6 @@ import React, { useState } from 'react';
 
 export default function page() {
     const t = useTranslations('account');
-    const t_ = useTranslations('');
     const { register, errors, trigger, clearErrors, setError, getValues, setValue, submit, watch, reset } = hookSignUp();
 
     const breadcrumbItems = [

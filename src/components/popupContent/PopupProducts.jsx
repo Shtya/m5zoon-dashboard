@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { hookSignUp } from '@/hooks/hookSignUp'
 import Input from '../atoms/Input'
+import Table from '../templates/Table'
+import InnerInventoryTable from '@/tables/InnerInventory'
+import InnerProductTable from '@/tables/InnerProduct'
 
 export default function PopupProducts() {
 	const t = useTranslations("products")
@@ -14,6 +17,7 @@ export default function PopupProducts() {
 		{value : "record" , name : t("feeding_record")} ,
 	]
 	const [val , setval] = useState(switchBtns[0].value)
+	const { headContent, data } = InnerProductTable();
 
   return (
 	<div>
@@ -26,11 +30,15 @@ export default function PopupProducts() {
 			<Image className=' w-[60px] h-[60px] rounded-full ' src={"/icons/test/13.png"} alt='' width={60} height={60} />
 		</div>
 
-		<div className='flex flex-col gap-[30px] mt-[30px] ' >
-			<Input cnInput={"!h-[50px] !bg-[#f7f7f7] !border-[#ebecee]"} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("product_details.product_name")}  />
-			<Input cnInput={"!h-[50px] !bg-[#f7f7f7] !border-[#ebecee]"} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("product_details.pieces_count")}  />
-			<Button name={t("confirmation")} cn={"w-full bg-secondery  "}  />
-		</div>
+		{val == "details" && <div className='flex flex-col gap-[30px] mt-[30px] ' >
+			<Input dataAos={"fade-up"} delay={0} cnInput={"!h-[50px] !bg-[#f7f7f7] !border-[#ebecee]"} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("product_details.product_name")}  />
+			<Input dataAos={"fade-up"} delay={100} cnInput={"!h-[50px] !bg-[#f7f7f7] !border-[#ebecee]"} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("product_details.pieces_count")}  />
+			<Button dataAos={"fade-up"} delay={200} name={t("confirmation")} cn={"w-full bg-secondery  "}  />
+		</div>}
+
+		{
+			val == "record" && <div data-aos="fade-up" > <Table nameEditBtn={''} head={headContent} data={data}  /> </div>
+		}
 	</div>
   )
 }

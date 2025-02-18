@@ -1,4 +1,17 @@
 {
+    "pricing": {
+        "shipping_fees": "رسوم الشحن",
+        "pricing_plans": "خطط الاسعار",
+        "call_center_fees": "رسوم مراكز الاتصال",
+        "upsell_fees": "رسوم اب سيل",
+        "received_orders_fees": "رسوم الطلبات المستلمة",
+        "confirmed_orders_fees": "رسوم تم التاكيد",
+        "responded_orders_fees": "رسوم تم الرد",
+        "cod_fees": "رسوم COD",
+        "return_fees": "رسوم المرتجع",
+        "monthly_fees": "الرسوم الشهرية"
+    },
+
     "sidebar": {
         "dashboard": "لوحة التحكم",
         "my_account": "حسابي",
@@ -109,25 +122,70 @@
     },
 
     "products": {
+        "save": "حفظ",
+        "add_new_product": "إضافة منتج جديد",
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "wholesale_price": "سعر الجملة",
+        "item_name": "اسم الصنف",
+        "categories": "الأقسام",
+        "product_classification": "تصنيف المنتج",
+        "entertainment_products": "منتجات ترفيهية",
+        "local": "محلي",
+        "piece_count": "عدد القطع",
+        "new_classification": "تصنيف جديد",
+        "add_new_item": "اضف صنف جديد",
+        "image_files_link": "لينك ملفات الصور",
+        "product_description": "وصف المنتج",
+        "normal": "Normal",
+        "option_1": "1",
+        "option_2": "2",
+        "option_3": "3",
+        "write_item_details_here": "يمكنك كتابة تفاصيل الصنف هنا ......",
+        "product_image": "صورة المنتج",
+        "additional_images": "صور إضافية",
+        "click_to_upload_product_image": "قم بالظغط هنا لرفع صورة المنتج",
+        "click_to_upload_files": "قم بالظغط هنا لتحميل الملفات.",
+        "upload_limit": "يمكنك التحميل ل 10 ملفات",
+
+
+        "product_edit_with_id": "تعديل المنتج(#{count})",
+        "product_edit": "تعديل منتج",
+
+        "stock_feeding": "تغزية المخزون",
+        "edit": "تعديل",
+        "product_details_with_id": "تفاصيل المنتج(#{count})",
+        "product_details2": "تفاصيل المنتج",
+        "product_name": "اسم المنتج",
+        "product_status": "حالة المنتج",
+        "product_status_active": "مفعل",
+        "remaining_quantity": "الكميه المتبقية",
+        "size": "المقاس",
+        "suggested_selling_price": "سعر بيع مقترح",
+        "manufacturing_type": "تصنيع المنتج",
+        "manufacturing_local": "محلي",
+        "product_files": "ملفات المنتج",
+        "file_available": "ملف متواجد هنا",
+        "current_orders": "طلبات حاليه (قيد التنفيذ)",
+        "piece_data": "بيانات القطع",
+        "shipping_stock": "المخزون فى شركات الشحن",
+        "sold_pieces_count": "عدد القطع المباعة",
+        "shelf_stock": "المخزون على الرف",
+        "total_pieces": "{count} قطعة",
+
         "add_product": "إضافة منتج",
         "search_placeholder": "ابحث عن ما تريد...",
         "total_products": 1500,
-        "products": "المنتجات",
-        "product_status": "حالة المنتج",
         "update": "تحديث",
         "search_now": "ابحث الان",
         "pending": "قيد الانتظار",
-
         "action": "اجراء",
-        "status": "الحالة",
         "on_shelf": "مخزون علي الرف",
         "sold_pieces": "عدد قطع مباعة",
         "with_shipping_companies": "مخزون مع شركات الشحن",
         "returned": "مرتجع",
         "in_progress": "طلبات قيد التنفيذ",
         "manufacturing": "التصنيع",
-        "categories": "الاقسام",
-        "wholesale_price": "سعر الجملة",
         "sku_code": "كود المنتج SKU",
         "name": "اسم",
         "number": "رقم",
@@ -142,7 +200,12 @@
             "pieces_count": "عدد القطع",
             "quantity": 2000
         },
-        "confirmation": "تأكيد"
+        "confirmation": "تأكيد",
+
+        "notes": "ملاحظات",
+        "status": "الحالة",
+        "quantity": "الكمية",
+        "feeding_date": "تاريخ التغذية"
     },
 
     "support-requests": {
@@ -333,7 +396,7 @@
         "total_profit": "إجمالي الربح",
         "profit_per_delivered_order": "ربح كل طلب تم توصيله",
         "total_sales": "إجمالي المبيعات",
-        "price" : "{count} درهم",
-        "summary" : "ملخص التكاليف"
+        "price": "{count} درهم",
+        "summary": "ملخص التكاليف"
     }
 }

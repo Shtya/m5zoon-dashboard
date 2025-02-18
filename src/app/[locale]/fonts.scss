@@ -8,8 +8,16 @@
 
 [dir='ltr'] body , [dir='ltr'] * {
     font-family: 'Cantata One', serif !important ;
+    .ql-container{
+        direction: rtl !important;
+    }
 }
 
 [dir='rtl'] body , [dir='rtl'] * {
     font-family: 'Almarai', 'Cairo' !important;
+
+    .ql-container , .ql-blank , .ql-container  p {
+        direction: rtl !important;
+        text-align: right !important;
+    }
 }
