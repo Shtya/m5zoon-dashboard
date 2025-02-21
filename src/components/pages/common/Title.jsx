@@ -12,12 +12,12 @@ export default function Title({title , cn , data , place}) {
 
 		<div className=' w-full flex items-center gap-[10px] ' >
 			<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<circle cx="8" cy="8.5" r="6.5" stroke="#F9A51A" stroke-width="3"/>
+			<circle cx="8" cy="8.5" r="6.5" stroke="#F9A51A" strokeWidth="3"/>
 			</svg>
-			<span className=' w-full text-[#0a2849] text-xl @max-xl:text-[14px] font-normal' > {title} </span>
+			<span className=' w-full text-[#0a2849] dark:text-white text-xl @max-md:!text-[14px] font-normal' > {title} </span>
 		</div>
 	
-		{data && <Select cnSelect={"bg-neutral-50 border !border-[#ebf0ed] "} cn={" max-w-[100px] h-[40px] "} KEY='city'  error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={data} place={place} />}
+		{data && <Select cnSelect={"bg-neutral-50 border !border-[#ebf0ed] dark:!border-border1 !min-h-[45px] "} cn={" rtl:max-w-[100px] ltr:max-w-[120px] "} KEY='city'  error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={data} place={place} />}
 
 	</div>
   )

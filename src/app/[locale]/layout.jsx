@@ -1,9 +1,16 @@
 import Layout from '@/components/templates/Layout';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+});
+
+
 import "./style.css"
 import "./fonts.scss"
-
 import { NextIntlClientProvider, useMessages } from 'next-intl';
-import {getMessages} from 'next-intl/server';
 
 export const metadata = {
     title: 'مخزون | حلول التجارة الإلكترونية المتكاملة',
@@ -34,10 +41,9 @@ export const metadata = {
 
 export default function RootLayout({ children, params: { locale } }) {
     const messages = useMessages();
-    // const messages = getMessages();
 
     return (
-        <html lang={locale} dir={locale == 'en' ? 'ltr' : 'rtl'}>
+        <html lang={locale} className={`${poppins.variable}`} dir={locale == 'en' ? 'ltr' : 'rtl'}>
             <body >
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <main>

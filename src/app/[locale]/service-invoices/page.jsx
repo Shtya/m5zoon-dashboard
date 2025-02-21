@@ -27,8 +27,8 @@ export default function page() {
             {/*  Name of the page  */}
             <div className=' cShadow min-h-[100px] @max-xl:justify-center  flex-wrap bg-white p-[20px] rounded-[10px]  flex items-center justify-between gap-[10px]  '>
                 <div className='flex items-center gap-[10px]'>
-                    <h1 className=' @max-lg:text-center text-[#0f1728] text-[27px] font-normal'> {t('invoices')} </h1>
-                    <div className='min-w-[45px] h-[27px] px-2 py-0.5 bg-[#f5f8ff] rounded-2xl justify-center items-center flex text-center text-[#084384] text-xs font-normal'> 1500 </div>
+                    <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-[27px] font-normal'> {t('invoices')} </h1>
+                    <div className='min-w-[45px] h-[27px] px-2 py-0.5  rounded-2xl justify-center items-center flex text-center text-[#084384] dark:text-white bg-[#f5f8ff] dark:bg-bg4 text-xs font-normal'> 1500 </div>
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap '>
@@ -48,7 +48,7 @@ export default function page() {
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap max-w-fit @xl:w-[40%] '>
-                    <Button cn={' !min-h-[55px] bg-secondery   '} name={t('search_now')} />
+                    <Button cn={' !min-h-[55px] bg-secondery dark:bg-primary   '} name={t('search_now')} />
                     <Button cn={' border border-gray-200 !min-h-[55px] bg-white !text-secondery   '} name={t('update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
                 </div>
             </div>

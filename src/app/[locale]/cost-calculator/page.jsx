@@ -74,7 +74,7 @@ export default function page() {
     const costs2 = [
       {
         title : t("call_centers") ,
-        icon : <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7.5" stroke="#F9A51A" stroke-width="3"/></svg>,
+        icon : <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7.5" stroke="#F9A51A" strokeWidth="3"/></svg>,
         lists : [
           { name : t("unconfirmed_orders_count") , value : 100 , },
           { name : t("total_orders") , value : 100 , },
@@ -84,7 +84,7 @@ export default function page() {
       },
       {
         title : t("shipping_fees") ,
-        icon : <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">        <circle cx="9.5" cy="9" r="7.5" stroke="#084384" stroke-width="3"/>        </svg>         ,
+        icon : <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">        <circle cx="9.5" cy="9" r="7.5" stroke="#084384" strokeWidth="3"/>        </svg>         ,
         lists : [
           {name : t("returned_orders") , value : 100 , },
           {name : t("total_orders") , value : 100 , },
@@ -94,7 +94,7 @@ export default function page() {
       },
       {
         title : t("orders_cost_delivered") ,
-        icon :<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7.5" stroke="#169C3B" stroke-width="3"/></svg>,
+        icon :<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="7.5" stroke="#169C3B" strokeWidth="3"/></svg>,
         lists : [
           {name : t("storage_fees") , value : 100 , },
           {name : t("advertisement_costs") , value : 100 , },
@@ -105,7 +105,7 @@ export default function page() {
     ]
     const costs3 = {
         title : t("summary") ,
-        icon : <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9.5" r="7.5" stroke="#2D9AC1" stroke-width="3"/></svg>,
+        icon : <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9.5" r="7.5" stroke="#2D9AC1" strokeWidth="3"/></svg>,
         lists : [
           { name : t("total_sales") , value : 100 , },
           { name : t("profit_per_delivered_order") , value : 100 , },
@@ -120,12 +120,12 @@ export default function page() {
             {/*  Name of the page  */}
             <div className=' cShadow min-h-[100px] @max-lg:justify-center  flex-wrap bg-white p-[20px] rounded-[10px]  flex items-center justify-between gap-[10px]  '>
                 <div>
-                    <h1 className=' @max-lg:text-center text-[#0f1728] text-2xl font-normal'> {t('cost_calculator')} </h1>
+                    <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-2xl font-normal'> {t('cost_calculator')} </h1>
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
                 <div className='flex items-center gap-[10px] ' >
-                  <Button name={t("save")} cn={" !bg-transparent shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] border border-[#efefef] !text-[#757d8a] "} order={"order-[-1]"} icon={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21.5H7M17 21.5H17.803C18.921 21.5 19.48 21.5 19.907 21.282C20.284 21.09 20.59 20.784 20.782 20.408C21 19.981 21 19.421 21 18.303V9.72C21 9.27 21 9.045 20.952 8.831C20.9094 8.64009 20.8389 8.45647 20.743 8.286C20.637 8.096 20.487 7.931 20.193 7.604L17.438 4.542C17.097 4.164 16.924 3.972 16.717 3.834C16.5303 3.71013 16.3241 3.61853 16.107 3.563C15.863 3.5 15.6 3.5 15.075 3.5H6.2C5.08 3.5 4.52 3.5 4.092 3.718C3.71569 3.90974 3.40974 4.21569 3.218 4.592C3 5.02 3 5.58 3 6.7V18.3C3 19.42 3 19.98 3.218 20.407C3.41 20.784 3.715 21.09 4.092 21.282C4.519 21.5 5.079 21.5 6.197 21.5H7M17 21.5V17.697C17 16.579 17 16.019 16.782 15.592C16.59 15.2155 16.2837 14.9096 15.907 14.718C15.48 14.5 14.92 14.5 13.8 14.5H10.2C9.08 14.5 8.52 14.5 8.092 14.718C7.71569 14.9097 7.40974 15.2157 7.218 15.592C7 16.02 7 16.58 7 17.7V21.5M15 7.5H9" stroke="#757D8A" stroke-width="1.41667" stroke-linecap="round" stroke-linejoin="round"/></svg>} />
-                  <Button name={t("calculate_result")} cn={"bg-secondery  "} order={"order-[-1]"} icon={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9735 13.4735C14.4431 13.4735 13.9344 13.6842 13.5593 14.0593C13.1842 14.4344 12.9735 14.9431 12.9735 15.4735V19.75C12.9735 20.2804 13.1842 20.7891 13.5593 21.1642C13.9344 21.5393 14.4431 21.75 14.9735 21.75H19.25C19.7804 21.75 20.2891 21.5393 20.6642 21.1642C21.0393 20.7891 21.25 20.2804 21.25 19.75V15.4735C21.25 14.9431 21.0393 14.4344 20.6642 14.0593C20.2891 13.6842 19.7804 13.4735 19.25 13.4735H14.9735ZM4.75 3.25C4.21957 3.25 3.71086 3.46071 3.33579 3.83579C2.96071 4.21086 2.75 4.71957 2.75 5.25V9.5265C2.75 10.0569 2.96071 10.5656 3.33579 10.9407C3.71086 11.3158 4.21957 11.5265 4.75 11.5265H9.0265C9.55693 11.5265 10.0656 11.3158 10.4407 10.9407C10.8158 10.5656 11.0265 10.0569 11.0265 9.5265V5.25C11.0265 4.71957 10.8158 4.21086 10.4407 3.83579C10.0656 3.46071 9.55693 3.25 9.0265 3.25H4.75Z" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.2492 3.25H14.9727C13.8681 3.25 12.9727 4.14543 12.9727 5.25V9.5265C12.9727 10.6311 13.8681 11.5265 14.9727 11.5265H19.2492C20.3537 11.5265 21.2492 10.6311 21.2492 9.5265V5.25C21.2492 4.14543 20.3537 3.25 19.2492 3.25Z" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.0265 13.4736H4.75C3.64543 13.4736 2.75 14.3691 2.75 15.4736V19.7501C2.75 20.8547 3.64543 21.7501 4.75 21.7501H9.0265C10.1311 21.7501 11.0265 20.8547 11.0265 19.7501V15.4736C11.0265 14.3691 10.1311 13.4736 9.0265 13.4736Z" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.88844 4.71045V10.0659M4.21094 7.38795H9.56644M14.4344 16.1514H19.7899M14.4344 19.0724H19.7899" stroke="white" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/></svg>} />
+                  <Button name={t("save")} cn={" !bg-white shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] border border-[#efefef] !text-[#757d8a] "} order={"order-[-1]"} icon={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21.5H7M17 21.5H17.803C18.921 21.5 19.48 21.5 19.907 21.282C20.284 21.09 20.59 20.784 20.782 20.408C21 19.981 21 19.421 21 18.303V9.72C21 9.27 21 9.045 20.952 8.831C20.9094 8.64009 20.8389 8.45647 20.743 8.286C20.637 8.096 20.487 7.931 20.193 7.604L17.438 4.542C17.097 4.164 16.924 3.972 16.717 3.834C16.5303 3.71013 16.3241 3.61853 16.107 3.563C15.863 3.5 15.6 3.5 15.075 3.5H6.2C5.08 3.5 4.52 3.5 4.092 3.718C3.71569 3.90974 3.40974 4.21569 3.218 4.592C3 5.02 3 5.58 3 6.7V18.3C3 19.42 3 19.98 3.218 20.407C3.41 20.784 3.715 21.09 4.092 21.282C4.519 21.5 5.079 21.5 6.197 21.5H7M17 21.5V17.697C17 16.579 17 16.019 16.782 15.592C16.59 15.2155 16.2837 14.9096 15.907 14.718C15.48 14.5 14.92 14.5 13.8 14.5H10.2C9.08 14.5 8.52 14.5 8.092 14.718C7.71569 14.9097 7.40974 15.2157 7.218 15.592C7 16.02 7 16.58 7 17.7V21.5M15 7.5H9" stroke="#757D8A" strokeWidth="1.41667" stroke-linecap="round" stroke-linejoin="round"/></svg>} />
+                  <Button name={t("calculate_result")} cn={"bg-secondery dark:bg-primary "} order={"order-[-1]"} icon={<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.9735 13.4735C14.4431 13.4735 13.9344 13.6842 13.5593 14.0593C13.1842 14.4344 12.9735 14.9431 12.9735 15.4735V19.75C12.9735 20.2804 13.1842 20.7891 13.5593 21.1642C13.9344 21.5393 14.4431 21.75 14.9735 21.75H19.25C19.7804 21.75 20.2891 21.5393 20.6642 21.1642C21.0393 20.7891 21.25 20.2804 21.25 19.75V15.4735C21.25 14.9431 21.0393 14.4344 20.6642 14.0593C20.2891 13.6842 19.7804 13.4735 19.25 13.4735H14.9735ZM4.75 3.25C4.21957 3.25 3.71086 3.46071 3.33579 3.83579C2.96071 4.21086 2.75 4.71957 2.75 5.25V9.5265C2.75 10.0569 2.96071 10.5656 3.33579 10.9407C3.71086 11.3158 4.21957 11.5265 4.75 11.5265H9.0265C9.55693 11.5265 10.0656 11.3158 10.4407 10.9407C10.8158 10.5656 11.0265 10.0569 11.0265 9.5265V5.25C11.0265 4.71957 10.8158 4.21086 10.4407 3.83579C10.0656 3.46071 9.55693 3.25 9.0265 3.25H4.75Z" stroke="white" strokeWidth="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.2492 3.25H14.9727C13.8681 3.25 12.9727 4.14543 12.9727 5.25V9.5265C12.9727 10.6311 13.8681 11.5265 14.9727 11.5265H19.2492C20.3537 11.5265 21.2492 10.6311 21.2492 9.5265V5.25C21.2492 4.14543 20.3537 3.25 19.2492 3.25Z" stroke="white" strokeWidth="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.0265 13.4736H4.75C3.64543 13.4736 2.75 14.3691 2.75 15.4736V19.7501C2.75 20.8547 3.64543 21.7501 4.75 21.7501H9.0265C10.1311 21.7501 11.0265 20.8547 11.0265 19.7501V15.4736C11.0265 14.3691 10.1311 13.4736 9.0265 13.4736Z" stroke="white" strokeWidth="0.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.88844 4.71045V10.0659M4.21094 7.38795H9.56644M14.4344 16.1514H19.7899M14.4344 19.0724H19.7899" stroke="white" strokeWidth="0.5" stroke-linecap="round" stroke-linejoin="round"/></svg>} />
                 </div>
             </div>
 
@@ -136,22 +136,22 @@ export default function page() {
                   <div key={i} className='cShadow !py-[10px]  bg-white rounded-[10px]' > 
                     <div className='flex items-center gap-[7px] ' > 
                       <span> {e.icon} </span>  
-                      <h4 className='text-[#3e4c5b] text-lg font-normal' > {e.title} </h4>
+                      <h4 className='text-[#3e4c5b] dark:text-[#fff] text-lg font-normal' > {e.title} </h4>
                     </div>
 
-                    <hr className=' my-[25px] border-dashed border-t border-t-[#eeeeee]' />
+                    <hr className=' my-[25px] border-dashed border-t border-t-[#eeeeee] dark:border-t-border1 ' />
                     <div className='flex flex-col gap-[25px] ' >
                         {
                           e.lists?.map((ele ,idx)=> (
                             <div key={idx} className='flex items-center justify-between ' >
                               <div className='flex items-center gap-[7px] ' >
-                                <h4 className='text-[#818b9a] text-[15px] font-normal' > {ele.name} </h4>
+                                <h4 className='text-[#818b9a] dark:text-white text-[15px] font-normal' > {ele.name} </h4>
                                 <ExplainIcon name={ele.explain} />
                               </div>
 
                               <div className='flex items-center gap-[7px] ' >
-                                <span className=' flex-none  text-[#6b6b6b] text-sm font-normal min-w-[34px] h-7 bg-white rounded-[3px] border border-[#ebf0ed] flex-col justify-center items-center gap-2.5 inline-flex' > {ele.value} </span>
-                                <span className=' flex-none text-center text-[#6b6b6b] text-base font-normal' > {e.unit} </span>
+                                <span className=' flex-none  text-[#6b6b6b] dark:text-[#fff] text-sm font-normal min-w-[34px] h-7 bg-white dark:bg-bg4 rounded-[3px] border border-[#ebf0ed] dark:border-border1 flex-col justify-center items-center gap-2.5 inline-flex' > {ele.value} </span>
+                                <span className=' flex-none text-center text-[#6b6b6b] dark:text-[#fff] text-base font-normal' > {e.unit} </span>
                               </div>
                             </div>
                           ) )
@@ -170,15 +170,15 @@ export default function page() {
                     <div key={i} className=' px-[30px] ' > 
                       <div className='flex items-center gap-[7px] mb-[15px] ' > 
                         <span> {e.icon} </span>  
-                        <h4 className='text-[#3e4c5b] text-lg font-normal' > {e.title} </h4>
+                        <h4 className='text-[#3e4c5b] dark:text-[#fff] text-lg font-normal' > {e.title} </h4>
                       </div>
 
                       <div className='flex flex-col ' >
                           {
                             e.lists?.map((ele ,idx)=> (
-                              <div key={idx} className={`${(e.lists.length-1) != idx && "border-dashed border-b-[.5px] border-b-[#e8e8e8]"} py-[10px] flex items-center justify-between`} >
-                                <h4 className={` ${(e.lists.length-1) == idx && "text-primary" } text-[#818b9a] text-[15px] font-normal`} > {ele.name} </h4>
-                                <span className={`${(e.lists.length-1) == idx && "text-primary" } flex-none text-center text-[#6b6b6b] text-base font-normal`} > {t("price" , {count : ele.value} )} </span>
+                              <div key={idx} className={`${(e.lists.length-1) != idx && "border-dashed border-b-[.5px] border-b-[#e8e8e8] dark:border-b-border1 "} py-[10px] flex items-center justify-between`} >
+                                <h4 className={` ${(e.lists.length-1) == idx && "text-primary dark:!text-primary" } text-[#818b9a] dark:text-white text-[15px] font-normal`} > {ele.name} </h4>
+                                <span className={`${(e.lists.length-1) == idx && "text-primary" } flex-none text-center text-[#6b6b6b] dark:text-[#fff] text-base font-normal`} > {t("price" , {count : ele.value} )} </span>
                               </div>
                             ) )
                           }
@@ -191,7 +191,7 @@ export default function page() {
             <div className='cShadow !py-[10px]  bg-white rounded-[10px]  ' >
                 <div className='flex items-center gap-[7px] mb-[15px] ' > 
                   <span> {costs3.icon} </span>  
-                  <h4 className='text-[#3e4c5b] text-lg font-normal' > {costs3.title} </h4>
+                  <h4 className='text-[#3e4c5b] dark:text-[#fff] text-lg font-normal' > {costs3.title} </h4>
                 </div>
               {
 
@@ -199,8 +199,8 @@ export default function page() {
                       {
                         costs3.lists?.map((ele ,idx)=> (
                           <div key={idx} className={`py-[10px] px-[30px] flex items-center justify-between`} >
-                            <h4 className={` ${ 2 == idx && "text-primary" } text-[#818b9a] text-[15px] font-normal`} > {ele.name} </h4>
-                            <span className={`${ 2 == idx && "text-primary" } flex-none text-center text-[#6b6b6b] text-base font-normal`} > {t("price" , {count : ele.value} )} </span>
+                            <h4 className={` ${ 2 == idx && "text-primary dark:!text-primary" } text-[#818b9a] dark:text-white text-[15px] font-normal`} > {ele.name} </h4>
+                            <span className={`${ 2 == idx && "text-primary" } flex-none text-center text-[#6b6b6b] dark:text-[#fff] text-base font-normal`} > {t("price" , {count : ele.value} )} </span>
                           </div>
                         ) )
                       }

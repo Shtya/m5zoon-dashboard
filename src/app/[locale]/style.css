@@ -10,6 +10,21 @@
 }
 
 
+:root {
+  /* --primary-color: #fff; Default light mode color */
+  /* --primary-color-2: #fff; */
+}
+
+.dark {
+  --primary-color: #151F3C; 
+  --primary-color-2: #1B2541; 
+  --primary-color-3: #1F2A4A; 
+  --primary-color-4: #243052; 
+  --border: #263358; 
+  
+}
+
+
 
 
 li {
@@ -21,7 +36,7 @@ a {
 }
 
 .container {
-  max-width: 1840px;
+  max-width: 2000px;
   width: 100%;
   padding: 0 10px;
   margin: auto;
@@ -31,12 +46,13 @@ a {
 }
 
 body {
-  background-color: #f7f7f7;
+  @apply bg-[#f7f7f7] dark:bg-[#151F3C] ;
   overflow-x: hidden  ;  
 }
 
 .cShadow {
-  @apply shadow-sm !p-[30px] !py-[40px]
+  @apply shadow-sm !p-[30px] !py-[40px] bg-[#FFF] dark:bg-[#1B2541]  ;
+
   /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12),  0 4px 8px rgba(0, 0, 0, 0.08); */
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08), 0 2px 5px rgba(0, 0, 0, 0.06); */
 }
@@ -51,18 +67,31 @@ body {
 
 
 .quill {
-  @apply bg-[#f7f7f7] rounded-md border border-[#ebebeb]
+  @apply bg-[#f7f7f7] dark:bg-bg2 rounded-md border border-[#ebebeb] dark:border-border1
 }
 .ql-container {
+  @apply bg-[#f9f9f9] dark:bg-bg4 ;
   border: none !important;
-  background-color: #f9f9f9;
   height: 240px !important;
   font-size: 15px !important;
 }
 
 .ql-toolbar {
   border: none !important;
-  background-color: #f3f4f6;
+  @apply bg-[#f3f4f6] dark:bg-bg3 ;
+
+}
+.ql-toolbar *  , .ql-snow * , .ql-snow .ql-blank::before {
+  @apply dark:!text-white placeholder:!text-white
+}
+.ql-toolbar * button  {
+  @apply dark:!bg-white dark:m-[2px]
+}
+.ql-picker-options {
+  @apply !bg-bg4 !border-border1 !border-[3px]
+}
+.ql-picker-options .ql-picker-item{
+  background-color: var(--primary-color-4);
 }
 
 @layer components {
@@ -111,7 +140,8 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #09396F;
+  @apply bg-secondery  dark:bg-primary
+    /* background: #09396F; */
     /* border-radius: 10px !important; */
 }
 

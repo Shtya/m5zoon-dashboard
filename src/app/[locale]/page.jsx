@@ -8,7 +8,7 @@ import SelectButton from '@/components/atoms/SelectButton';
 import Card from '@/components/atoms/SummaryCircle';
 import Title from '@/components/pages/common/Title';
 import AdSlider from '@/components/pages/dashboard/AdSlider';
-import CustomPieChart from '@/components/pages/dashboard/CustomPieChart';
+// import CustomPieChart from '@/components/pages/dashboard/CustomPieChart';
 import OrdersChart from '@/components/pages/dashboard/OrdersChart';
 import ProductMostSales, { AvarageCosts, DataStores } from '@/components/pages/dashboard/ProductMostSales';
 import { hookSignUp } from '@/hooks/hookSignUp';
@@ -16,6 +16,10 @@ import { DataStoreData, FadeDateData, ProductMoreSalesData, ProductsData, social
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
+
+import dynamic from "next/dynamic";
+import { Search } from 'lucide-react';
+const CustomPieChart = dynamic(() => import("@/components/pages/dashboard/CustomPieChart"), { ssr: false });
 
 export default function page() {
     const t = useTranslations('dashboard');
@@ -74,18 +78,6 @@ export default function page() {
   ];
 
 
-
-  /* 
-  "account_summary": {
-    "title": "ملخص حسابك مع مخزون",
-    "": "إجمالي المخزون"
-    "": "اجمالي المنتجات",
-    "": "فى انتظار تعبئة المخزون",
-    "": "أرباحك مع مخزون",
-    "": "أرباح تم سحبها",
-    "": "المرتجعات",
-  },
-  */
   const account_summaryData = [
     { count: 101, price: 2500, value: 70, color: '#fff', secondColor: '#225d9e', title: t('account_summary.total_stock'), bg: 'bg-secondery' },
     { count: 102, price: 2500, value: 40, color: '#fbb03b', secondColor: '#fff7e3', title: t('account_summary.total_products') },
@@ -101,7 +93,7 @@ export default function page() {
             {/*  Name of the page  */}
             <div className=' cShadow min-h-[100px] @max-lg:justify-center  flex-wrap bg-white p-[20px] rounded-[10px]  flex items-center justify-between gap-[10px]  '>
                 <div>
-                    <h1 className=' @max-lg:text-center text-[#0f1728] text-2xl font-normal'> {t('dashboard.control_panel')} </h1>
+                    <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-2xl font-normal'> {t('dashboard.control_panel')} </h1>
                     <Breadcrumb items={breadcrumbItems} />
                 </div>
 
@@ -112,14 +104,14 @@ export default function page() {
 
             {/* Search */}
             <div className=' cShadow @max-2xl:justify-center  min-h-[100px]  bg-white p-[20px] rounded-[10px]  flex items-end justify-between flex-wrap gap-x-[10px] gap-y-[20px]  '>
-                <div className='grid grid-cols-3 gap-[20px] @max-md:grid-cols-1 @max-md:w-full '>
-                    <Input KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search.search_product')} label={t('search.search_product')} icon={'/icons/search.png'} />
+                <div className='grid grid-cols-1 @md:grid-cols-2 @xl:grid-cols-3 gap-[20px]  max-w-[1100px] w-full '>
+                    <Input KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search.search_product')} label={t('search.search_product')} icon={<Search size={18} />} />
                     <Select KEY='city' error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={socialMediaPlatforms} label={t('search.choose_platform')} />
-                    <Calendar KEY='date' error={errors?.date} setValue={setValue} watch={watch} trigger={trigger} classname={'w-full'} label={t('search.choose_date')} />
+                    <Calendar KEY='date' error={errors?.date} setValue={setValue} watch={watch} trigger={trigger} cnInput={"h-[50px]"} classname={'w-full'} label={t('search.choose_date')} />
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap max-w-fit w-full '>
-                    <Button cn={' !min-h-[55px] bg-secondery   '} name={t('search.search_now')} />
+                    <Button cn={' !min-h-[55px] bg-secondery dark:bg-bg1   '} name={t('search.search_now')} />
                     <Button cn={' border border-gray-200 !min-h-[55px] bg-white !text-secondery   '} name={t('search.update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
                 </div>
             </div>
@@ -129,9 +121,9 @@ export default function page() {
             {/*  Summery  */}
             <div className=' cShadow bg-white p-[20px] rounded-[10px] ' >
                 <Title title={t("statics.title")} place={t("statics.product")}  data={ProductsData} />
-                <div className='   grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-[20px]   '>
+                <div className='   grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[20px]   '>
                     {staticsData.map((item, index) => (
-                        <Card key={index} data={item} />
+                        <Card key={index} index={index} data={item} />
                     ))}
                 </div>
             </div>
@@ -141,12 +133,12 @@ export default function page() {
 
             {/*  Charts  */}
             <div className=' grid grid-cols-2 gap-[20px] @max-lg:grid-cols-1  ' >
-                    <div className=' cShadow bg-white p-[20px] rounded-[10px]' >
+                    <div className=' cShadow p-[20px] rounded-[10px]' >
                       <Title title={t("platform_orders.title")}   data={FadeDateData} />
                        <AdSlider data={avarageOrderData} />
                     </div>
                     
-                    <div className=' cShadow bg-white p-[20px] rounded-[10px]' >
+                    <div className=' cShadow p-[20px] rounded-[10px]' >
                       <Title title={t("earnings_by_country.title")}   data={FadeDateData} />
                        <CustomPieChart data={CustomPieChartData} />
                     </div>
@@ -157,9 +149,9 @@ export default function page() {
             {/* Summary Account */}
             <div className=' cShadow bg-white p-[20px] rounded-[10px] ' >
                 <Title title={t("account_summary.title")}  />
-                <div className='   grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[20px]   '>
+                <div className='   grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[20px]   '>
                     {account_summaryData.map((item, index) => (
-                        <Card key={index} data={item} />
+                        <Card index={index} key={index} data={item} />
                     ))}
                 </div>
             </div>

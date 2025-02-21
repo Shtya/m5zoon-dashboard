@@ -10,7 +10,7 @@ export default function RichTextEditor({ label , place , cn }) {
 
   return (
     <div className={`w-full flex flex-col gap-[15px]  ${cn} `}>
-      <label className="text-[#3e4c5b] text-lg font-normal">
+      <label className="text-[#3e4c5b]  dark:text-[#fff] text-lg font-normal">
         {label}
       </label>
 

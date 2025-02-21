@@ -1,4 +1,10 @@
 {
+
+
+    "choose_time" : "أختر تاريخ" ,
+    "choose_some_thing" : "أختر قيمه" ,
+
+
     "pricing": {
         "shipping_fees": "رسوم الشحن",
         "pricing_plans": "خطط الاسعار",

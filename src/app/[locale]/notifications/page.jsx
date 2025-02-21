@@ -90,8 +90,8 @@ export default function page() {
                 
                 <div className='flex items-center justify-between gap-[10px] @max-xl:justify-center  flex-wrap ' >
                     <div className='flex items-center gap-[10px]'>
-                        <h1 className=' @max-lg:text-center text-[#0f1728] text-[27px] font-normal'> {t('title')} </h1>
-                        <div className='min-w-[45px] h-[27px] px-2 py-0.5 bg-[#f5f8ff] rounded-2xl justify-center items-center flex text-center text-[#084384] text-xs font-normal'> 1500 </div>
+                        <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-[27px] font-normal'> {t('title')} </h1>
+                        <div className='min-w-[45px] h-[27px] px-2 py-0.5  rounded-2xl justify-center items-center flex text-center text-[#084384] dark:text-white bg-[#f5f8ff] dark:bg-bg4 text-xs font-normal'> 1500 </div>
                     </div>
 
                     <div className='flex items-center gap-[10px] flex-wrap '>
@@ -100,14 +100,14 @@ export default function page() {
                 </div>
 
 
-                <hr className={`${!removeAll ? "max-h-[400px] opacity-100 border-t-[1px] border-[#EBEBEB] my-[30px] " :  "max-h-0 opacity-0" } overflow-auto ease-in-out duration-500 transition-all`} />
+                <hr className={`${!removeAll ? "max-h-[400px] opacity-100 border-t-[1px] border-[#EBEBEB] dark:border-border1 my-[30px] " :  "max-h-0 opacity-0" } overflow-auto ease-in-out duration-500 transition-all`} />
 
                 <div className={` ${!removeAll ? "max-h-[400px] opacity-100 " :  "max-h-0 opacity-0" } overflow-auto ease-in-out duration-500 transition-all flex items-center justify-between`} >
                     <div className='  flex items-center gap-[20px] px-[10px]' >
-                        <CheckBoxTable onclick={handleSelectAll} KEY={"All"} />
-                        <label className='cursor-pointer text-[#084384] text-lg font-semibold' htmlFor="All"> {t("select_all")} </label>
+                        <CheckBoxTable onclick={handleSelectAll} cn={"dark:border-white"} KEY={"All"} />
+                        <label className='cursor-pointer text-[#084384] dark:text-white text-lg font-semibold' htmlFor="All"> {t("select_all")} </label>
                     </div>
-                    <div className=' cursor-pointer hover:opacity-90 duration-300 flex items-center gap-[5px] ' >
+                    <div dir='rtl' className=' cursor-pointer hover:opacity-90 duration-300 flex items-center gap-[5px] ' >
                         <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1_7774)"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.4165 0.833083C14.0915 0.508083 13.5665 0.508083 13.2415 0.833083L8.54154 5.53308L9.71654 6.70808L14.4165 1.99975C14.7332 1.68308 14.7332 1.14975 14.4165 0.833083ZM17.9499 0.824749L9.71654 9.05808L6.81654 6.16641C6.49154 5.84141 5.96654 5.84141 5.64154 6.16641C5.31654 6.49141 5.31654 7.01641 5.64154 7.34141L9.12487 10.8247C9.44987 11.1497 9.97487 11.1497 10.2999 10.8247L19.1249 2.00808C19.4499 1.68308 19.4499 1.15808 19.1249 0.833083H19.1165C18.7999 0.49975 18.2749 0.499749 17.9499 0.824749ZM0.933203 7.34975L4.41654 10.8331C4.74154 11.1581 5.26654 11.1581 5.59154 10.8331L6.17487 10.2497L2.1082 6.16641C1.7832 5.84141 1.2582 5.84141 0.933203 6.16641C0.608203 6.49141 0.608203 7.02475 0.933203 7.34975Z" fill="#637381"/></g><defs><clipPath id="clip0_1_7774"><rect width="20" height="10.8333" fill="white" transform="translate(0 0.583008)"/></clipPath></defs></svg>
                         <span className='text-[#ee9e1a] text-base font-semibold'>{t("mark_all_as_read")}</span>
                     </div>
@@ -116,14 +116,14 @@ export default function page() {
                 <div className={`${removeAll ? "" : " mt-[30px] "} duration-300 notifications  `}>
                     {
                         notifications_list.map((e,i)=> (
-                            <div key={i} className={` ${!removeAll ? "px-[10px] py-[20px] max-h-[400px] opacity-100 " :  "max-h-0 opacity-0" } duration-500 transition-all ease-in-out  overflow-hidden relative border-t border-t-[#ebebeb] flex items-center gap-[20px]`} > 
-                                <div className={`bg-neutral-50 ${ selectedIds?.includes(e.id)  ? 'bottom-0' : 'bottom-[-100%]'} h-full w-[calc(100%+20px)] rtl:left-0 ltr:right-0  shadow-md absolute duration-500 transition-all overflow-auto ease-in-out `} ></div>
-                                <CheckBoxTable cn={""} onclick={()=> handleCheckboxChange(e.id) } KEY={`notification-${e.id}`}  />
+                            <div key={i} className={` ${!removeAll ? "px-[10px] py-[20px] max-h-[400px] opacity-100 " :  "max-h-0 opacity-0" } duration-500 transition-all ease-in-out  overflow-hidden relative border-t border-t-[#ebebeb] dark:border-t-border1 flex items-center gap-[20px]`} > 
+                                <div className={`bg-neutral-50 dark:bg-bg4 ${ selectedIds?.includes(e.id)  ? 'bottom-0' : 'bottom-[-100%]'} h-full w-[calc(100%+20px)] rtl:left-0 ltr:right-0  shadow-md absolute duration-500 transition-all overflow-auto ease-in-out `} ></div>
+                                <CheckBoxTable cn={" dark:border-white "} onclick={()=> handleCheckboxChange(e.id) } KEY={`notification-${e.id}`}  />
                                 <div className=' z-[100] relative    flex items-center gap-[10px] ' >
                                     <Image src={"/icons/test/13.png"} alt='' width={50} height={50} />
-                                    <div>
-                                        <h4 className='opacity-80 text-[#162522] text-lg font-normal' > {e.message} </h4>
-                                        <span className='opacity-70  text-[#162522] text-sm font-medium' > {e.date} </span>
+                                    <div >
+                                        <h4 className='opacity-80 text-[#162522] dark:text-white text-lg font-normal' > {e.message} </h4>
+                                        <span className='opacity-70  text-[#162522] dark:text-white text-sm font-medium' > {e.date} </span>
                                     </div>
                                 </div>
 

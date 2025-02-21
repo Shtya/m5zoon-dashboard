@@ -1,4 +1,3 @@
-"use client";
 import { PieChart, Pie, Cell, Legend, Tooltip } from "recharts";
 
 
@@ -17,7 +16,7 @@ export default function CustomPieChart({data}) {
 		<div className=" px-[20px] flex items-center justify-center gap-x-[70px] @max-2xl:gap-x-[40px] gap-y-[20px] flex-wrap " > 
 		  {
 			data?.map((e,i)=> (
-				<span className={`  relative text-[#121212] text-sm font-normal`} >  
+				<span key={i} className={`  relative text-[#121212] dark:text-white  text-sm font-normal`} >  
 					<span className="absolute w-[20px] h-[9px] rtl:right-[-24px] ltr:left-[-23px] top-[50%] translate-y-[-50%]" style={{backgroundColor : e.color }} >  </span>
 					{e.name} : {e.value} {e.currency} </span>
 			))

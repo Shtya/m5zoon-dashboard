@@ -32,6 +32,12 @@ module.exports = {
         primary: '#F9A51A',
         secondery: '#09396F',
         secondery2: '#1e1f4b',
+
+        bg1 : "var(--primary-color)",
+        bg2 : "var(--primary-color-2)",
+        bg3 : "var(--primary-color-3)",
+        bg4 : "var(--primary-color-4)",
+        border1 : "var(--border)",
       },
       // Define your viewport-based breakpoints (optional)
       screens: {

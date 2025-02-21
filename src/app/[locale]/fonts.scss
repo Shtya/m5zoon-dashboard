@@ -5,13 +5,15 @@
 
 @import url(https://fonts.googleapis.com/css?family=Almarai:300,regular,700,800);
 @import url(https://fonts.googleapis.com/css?family=Cantata+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
 
 [dir='ltr'] body , [dir='ltr'] * {
-    font-family: 'Cantata One', serif !important ;
-    .ql-container{
-        direction: rtl !important;
-    }
+    font-family: 'Poppins', serif !important ;
+    .ql-container{ direction: rtl !important }
 }
+
 
 [dir='rtl'] body , [dir='rtl'] * {
     font-family: 'Almarai', 'Cairo' !important;

@@ -33,7 +33,7 @@ export default function Layout({ children }) {
 
     return (
         <GlobalProvider>
-        <div className='container !px-[20px]  bg-[#f7f7f7] relative grid grid-cols-[auto,1fr] gap-[20px] '>
+        <div className='container !px-[20px]   relative grid grid-cols-[auto,1fr] gap-[20px] '>
             <Sidebar />
             <main className='container-type: inline-size pt-[10px] '>
                 <div className='@container' >

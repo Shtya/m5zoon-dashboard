@@ -15,15 +15,15 @@ export default function AdSlider({ data }) {
     return (
         <div>
             {data?.map((e, i) => (
-                <div className='flex items-center  w-full gap-2 p-2'>
-                    <div className=' flex-none bg-[#f5f8fb] h-[50px] w-[50px] flex text-center justify-center '>
+                <div key={i} className='flex items-center  w-full gap-2 p-2'>
+                    <div className=' flex-none bg-[#f5f8fb] dark:bg-bg3 h-[50px] w-[50px] flex text-center justify-center '>
                         <Image className=' object-contain '  src={e.icon} alt={e.name} width={30} height={30} />
                     </div>
-                    <div className='flex flex-col gap-[10px] w-full '>
+                    <div className='  flex flex-col gap-[10px] w-full '>
                         <div className='flex items-center justify-between gap-[10px] '>
-                            <span className='text-sm text-gray-600'> {e.name} </span>
+                            <span className='text-sm text-gray-600 dark:text-white '> {e.name} </span>
                             <div className='flex items-center gap-[5px] '>
-                                <span> {e.count_order} {t("dashboard.platform_orders.order") } </span>
+                                <span className='text-[#121212] dark:text-white ' > {e.count_order} {t("dashboard.platform_orders.order") } </span>
                                 <Image src={e.status == "up" ? "/icons/up-green.png" : "/icons/down-red.png" } alt={e.name} width={17} height={17} />
                             </div>
                         </div>

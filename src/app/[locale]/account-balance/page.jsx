@@ -1,5 +1,4 @@
 'use client';
-import Button from '@/components/atoms/Button';
 import ButtonIcon from '@/components/atoms/ButtonIcon';
 import Input from '@/components/atoms/Input';
 import Table from '@/components/templates/Table';
@@ -10,6 +9,7 @@ import Popup from '@/components/molecules/Popup';
 import PopupWithdrow from '@/components/popupContent/PopupWithdrow';
 import AccountBalanceTable from '@/tables/AccountBalance';
 import Image from 'next/image';
+import { Search } from 'lucide-react';
 
 export default function page() {
     const t = useTranslations('my-withdrawals');
@@ -20,26 +20,18 @@ export default function page() {
     //! popup
     const [isOpenPopup, setisOpenPopup] = useState(false);
 
-    /*
-        "total_earnings": "اجمالي الارباح",
-        "": "إجمالي الرصيد",
-        "total_balance_value": "10000 ر.س",
-        "": "رصيد قيد المراجعة",
-        "": "رصيد قابل للسحب",
-        "": "رصيد تم سحبه",
-	*/
 
     return (
         <div className='mt-[20px] mb-[80px] flex flex-col gap-[20px]'>
             {/*  Name of the page  */}
             <div className=' cShadow min-h-[100px] @max-xl:justify-center  flex-wrap bg-white p-[20px] rounded-[10px]  flex items-center justify-between gap-[10px]  '>
                 <div className='flex items-center gap-[10px]'>
-                    <h1 className=' @max-lg:text-center text-[#0f1728] text-[27px] font-normal'> {t('account_balance')} </h1>
-                    <div className='min-w-[45px] h-[27px] px-2 py-0.5 bg-[#f5f8ff] rounded-2xl justify-center items-center flex text-center text-[#084384] text-xs font-normal'> 1500 </div>
+                    <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-[27px] font-normal'> {t('account_balance')} </h1>
+                    <div className='min-w-[45px] h-[27px] px-2 py-0.5  rounded-2xl justify-center items-center flex text-center text-[#084384] dark:text-white bg-[#f5f8ff] dark:bg-bg4 text-xs font-normal'> 1500 </div>
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap '>
-                    <Input cnInput={'!h-[50px]'} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search_placeholder')} icon={'/icons/search.png'} />
+                    <Input cnInput={'!h-[50px]'} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search_placeholder')} icon={ <Search /> } />
                     <ButtonIcon icon={'/icons/replace.png'} />
                     <ButtonIcon icon={'/icons/pdf.png'} />
                     <ButtonIcon icon={'/icons/print.png'} />
@@ -49,7 +41,7 @@ export default function page() {
 
             {/*  My Wallet  */}
             <div className='cShadow text-white  grid grid-cols-2 @max-2xl:grid-cols-1 gap-[50px]  min-h-[100px]  bg-white p-[20px] rounded-[10px] '>
-                <div className=' relative min-h-[252px] p-6 bg-gradient-to-b from-[#084384] to-[#084384] rounded-2xl border border-[#dcdcdd] flex-col justify-start items-start gap-[76px] inline-flex'>
+                <div className=' relative min-h-[252px] p-6 bg-gradient-to-b dark:from-bg3 dark:to-bg4 from-[#084384] to-[#084384] rounded-2xl border border-[#dcdcdd] dark:border-border1 flex-col justify-start items-start gap-[76px] inline-flex'>
                     <Image className='w-full h-full absolute inset-0 object-fill' src={'/imgs/card.png'} alt='' width={250} height={100} />
 
                     <h3 className='text-[#f6f6f6] text-[22px] font-normal flex items-center gap-[10px] '>
@@ -79,7 +71,7 @@ export default function page() {
                 <div className='flex flex-col gap-[20px] '>
                     <div className='min-h-[117px] w-full p-5 bg-[#f7f8fa] rounded-[10px] justify-between items-center inline-flex'>
                         <div className='flex-col gap-[15px] inline-flex'>
-							<h3 className='text-[#7a7a7e] text-xl font-normal flex items-center gap-[10px] '>
+							<h3 className='text-[#7a7a7e] dark:text-secondery text-xl font-normal flex items-center gap-[10px] '>
 								<span className='w-[3px] h-[18px] bg-secondery rounded-tr-[30px] rounded-bl-[30px]' /> {t('total_balance')}
 							</h3>
                             <div className=" text-[#084384] text-[22px] font-normal "> {'10000'} {t_('currency.saudi_currency')} </div>
@@ -91,7 +83,7 @@ export default function page() {
 
                     <div className='min-h-[117px] w-full border border-[#eeeeee] p-5  rounded-[10px] justify-between items-center inline-flex'>
                         <div className='flex-col  gap-[15px] inline-flex'>
-							<h3 className='text-[#7a7a7e] text-xl font-normal flex items-center gap-[10px] '>
+							<h3 className='text-[#7a7a7e] dark:text-white text-xl font-normal flex items-center gap-[10px] '>
 								<span className='w-[3px] h-[18px] bg-primary rounded-tr-[30px] rounded-bl-[30px]' /> {t('pending_balance')}
 							</h3>
                             <div className=" text-primary text-[22px] font-normal "> {'10000'} {t_('currency.saudi_currency')} </div>
