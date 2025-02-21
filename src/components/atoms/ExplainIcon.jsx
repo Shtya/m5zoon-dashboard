@@ -13,7 +13,7 @@ export default function ExplainIcon({ name, title, cn }) {
             <div
                 className={` delay-500 select-none 
 			hidden group-hover:flex ease-in-out duration-500 transition-all  z-[10] text-center text-white text-[12px] font-normal absolute top-[30px] w-[120px] left-[50%] translate-x-[-50%] px-[5px] py-[5px] bg-[#14549b] dark:bg-bg1 rounded-[3px] justify-center items-center gap-2.5
-			after:absolute after:border-[10px] after:border-[transparent_transparent_#14549b_transparent] after:border-b-bg1 after:top-[-20px] after:left-[50%] after:translate-x-[-50%]
+			after:absolute after:border-[10px] after:border-[transparent_transparent_#14549b_transparent] dark:after:border-b-bg1 after:top-[-20px] after:left-[50%] after:translate-x-[-50%]
 			`}>
                 {name}
             </div>
