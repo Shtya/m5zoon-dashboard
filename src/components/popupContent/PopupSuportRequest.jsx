@@ -14,7 +14,7 @@ export default function PopupSuportRequest() {
 	<div>
 
 		<div className='flex flex-col gap-[30px] mt-[30px] ' >
-			<Input cnInput={"!h-[50px] !bg-[#f7f7f7] !border-[#ebecee] dark:!border-[#263358] "} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("customer_name")}  />
+			<Input cnInput={"!h-[45px] !bg-[#f7f7f7] !border-[#ebecee] dark:!border-[#263358] "} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("customer_name")}  />
 			<TextArea cnInput={"!h-[120px] !bg-[#f7f7f7] dark:!bg-bg3 !border-[#ebecee]  "} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t("message_content")}  />
 			<Button name={t("save")} cn={"w-full bg-secondery dark:bg-primary  "}  />
 		</div>

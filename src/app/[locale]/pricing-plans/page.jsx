@@ -28,7 +28,7 @@ export default function page() {
             {/*  Fees  */}
             <div className='cShadow text-white  min-h-[100px]  bg-white p-[20px] rounded-[10px] '>
                 <Title title={t("call_center_fees")}  />
-                <div className='grid @2xl:!grid-cols-4 @xl:!grid-cols-3 @lg:!grid-cols-2  grid-cols-1  gap-[20px] '>
+                <div className='grid @2xl:!grid-cols-4 @xl:!grid-cols-3   grid-cols-2  gap-[20px] '>
                 {
                     cards?.map((e,i)=> (
                         <div className={` w-full  ${i == 0 &&"bg-secondery dark:bg-primary text-white"} dark:bg-bg3  text-[#7a7a7e] dark:text-white min-h-[100px] py-[10px] p-[10px] border-[#EEEEEE] dark:border-border1 border-[.5px]  rounded-[10px] justify-between items-center inline-flex`}>
@@ -50,7 +50,7 @@ export default function page() {
             {/*  Fees  */}
             <div className='cShadow text-white  min-h-[100px]  bg-white p-[20px] rounded-[10px] '>
                 <Title title={t("shipping_fees")}  />
-                <div className='grid @2xl:!grid-cols-4 @xl:!grid-cols-3 @lg:!grid-cols-2  grid-cols-1  gap-[20px] '>
+                <div className='grid @2xl:!grid-cols-4 @xl:!grid-cols-3  grid-cols-2 gap-[20px] '>
                 {
                     cards?.map((e,i)=> (
                         <div className={` w-full  ${i == 0 &&"bg-secondery dark:bg-primary text-white"}  text-[#7a7a7e] dark:text-white dark:border-border1 min-h-[100px] py-[10px] p-[10px] border-[#EEEEEE] border-[.5px]  rounded-[10px] justify-between items-center inline-flex`}>

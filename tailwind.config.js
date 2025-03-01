@@ -9,6 +9,7 @@ const containerQueriesPlugin = plugin(function ({ addVariant, theme }) {
     'lg': '640px', // Large breakpoint
     'xl': '768px', // Extra large breakpoint
     '2xl': '1024px', // 2X large breakpoint
+    '3xl': '1224px', // 3X large breakpoint
   };
 
   // Add min-width variants

@@ -13,8 +13,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 5240.75,
 		  account_type: "Savings",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/1/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/1/200/300"
 		},
 		{
 		  id: 2,
@@ -22,8 +21,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 10250.5,
 		  account_type: "Checking",
 		  status: "Inactive",
-		  img: "https://picsum.photos/seed/2/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/2/200/300"
 		},
 		{
 		  id: 3,
@@ -31,8 +29,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 7850.2,
 		  account_type: "Business",
 		  status: "Pending",
-		  img: "https://picsum.photos/seed/3/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/3/200/300"
 		},
 		{
 		  id: 4,
@@ -40,8 +37,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 12670.9,
 		  account_type: "Savings",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/4/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/4/200/300"
 		},
 		{
 		  id: 5,
@@ -49,8 +45,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 4320.65,
 		  account_type: "Checking",
 		  status: "Suspended",
-		  img: "https://picsum.photos/seed/5/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/5/200/300"
 		},
 		{
 		  id: 6,
@@ -58,8 +53,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 980.3,
 		  account_type: "Savings",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/6/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/6/200/300"
 		},
 		{
 		  id: 7,
@@ -67,8 +61,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 3100.85,
 		  account_type: "Business",
 		  status: "Inactive",
-		  img: "https://picsum.photos/seed/7/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/7/200/300"
 		},
 		{
 		  id: 8,
@@ -76,8 +69,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 7540.0,
 		  account_type: "Checking",
 		  status: "Pending",
-		  img: "https://picsum.photos/seed/8/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/8/200/300"
 		},
 		{
 		  id: 9,
@@ -85,8 +77,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 20050.45,
 		  account_type: "Savings",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/9/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/9/200/300"
 		},
 		{
 		  id: 10,
@@ -94,8 +85,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 6540.2,
 		  account_type: "Business",
 		  status: "Inactive",
-		  img: "https://picsum.photos/seed/10/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/10/200/300"
 		},
 		{
 		  id: 11,
@@ -103,8 +93,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 8750.9,
 		  account_type: "Checking",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/11/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/11/200/300"
 		},
 		{
 		  id: 12,
@@ -112,8 +101,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 13450.6,
 		  account_type: "Savings",
 		  status: "Pending",
-		  img: "https://picsum.photos/seed/12/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/12/200/300"
 		},
 		{
 		  id: 13,
@@ -121,8 +109,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 4500.25,
 		  account_type: "Business",
 		  status: "Suspended",
-		  img: "https://picsum.photos/seed/13/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/13/200/300"
 		},
 		{
 		  id: 14,
@@ -130,8 +117,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 9250.75,
 		  account_type: "Checking",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/14/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/14/200/300"
 		},
 		{
 		  id: 15,
@@ -139,8 +125,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 11240.1,
 		  account_type: "Savings",
 		  status: "Inactive",
-		  img: "https://picsum.photos/seed/15/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/15/200/300"
 		},
 		{
 		  id: 16,
@@ -148,8 +133,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 3840.4,
 		  account_type: "Business",
 		  status: "Pending",
-		  img: "https://picsum.photos/seed/16/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/16/200/300"
 		},
 		{
 		  id: 17,
@@ -157,8 +141,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 12950.5,
 		  account_type: "Savings",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/17/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/17/200/300"
 		},
 		{
 		  id: 18,
@@ -166,8 +149,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 4850.3,
 		  account_type: "Checking",
 		  status: "Inactive",
-		  img: "https://picsum.photos/seed/18/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/18/200/300"
 		},
 		{
 		  id: 19,
@@ -175,8 +157,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 7100.85,
 		  account_type: "Business",
 		  status: "Active",
-		  img: "https://picsum.photos/seed/19/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/19/200/300"
 		},
 		{
 		  id: 20,
@@ -184,8 +165,7 @@ export default function MyWithdrawalsTable() {
 		  balance: 5400.6,
 		  account_type: "Savings",
 		  status: "Suspended",
-		  img: "https://picsum.photos/seed/20/200/300",
-		  action: "View Details",
+		  img: "https://picsum.photos/seed/20/200/300"
 		},
 	  ];
 
@@ -197,7 +177,6 @@ export default function MyWithdrawalsTable() {
 		{ sort : true , name : t("account_type") },
 		{ sort : true , name : t("status") },
 		{ sort : false , name : t("payment_proof") },
-		{ sort : false , name : t("action") }
 	]
 
 

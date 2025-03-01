@@ -14,13 +14,13 @@ export default function RichTextEditor({ label , place , cn }) {
         {label}
       </label>
 
-      <div className="rounded-lg overflow-hidden " style={{direction : "ltr"}} >
+      <div className="rounded-[6px] overflow-hidden " style={{direction : "ltr"}} >
         <ReactQuill
           theme="snow"
           value={content}
           onChange={setContent}
           placeholder={place}
-          className="  rounded-lg "
+          className="  rounded-[6px] "
 		  
         />
       </div>

@@ -44,7 +44,7 @@ export default function Footer() {
                     <div>
                         <h3 className='text-secondery t20 font-semibold mb-[20px] max-md:mb-[10px] ' > {t("title")} </h3>
                         <ul className=' social flex items-center gap-[10px] ' >
-                            {social.map((e,i)=> <li key={i} className=' group cursor-pointer hover:bg-secondery  hover:border-secondery duration-300 w-[40px] h-[40px] bg-white rounded-[5px] border border-[#eeeeee] flex justify-center items-center ' > <a>  {e} </a> </li> )}
+                            {social.map((e,i)=> <li key={i} className=' group cursor-pointer hover:bg-secondery  hover:border-secondery duration-300 w-[40px] h-[40px] bg-white rounded-[6px] border border-[#eeeeee] flex justify-center items-center ' > <a>  {e} </a> </li> )}
                         </ul>
                     </div>
 

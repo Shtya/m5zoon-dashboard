@@ -11,7 +11,7 @@ import { FadeDate, productStatusOptions } from '@/seed';
 import Title from '@/components/pages/common/Title';
 import CallCenterFeeTable from '@/tables/CallCenterFee';
 
-export default function page() {
+export default function Page() {
     const t = useTranslations('callCenter');
     const { register, errors, trigger, clearErrors, setError, getValues, setValue, submit, watch, reset } = hookSignUp();
     const { headContent, data } = CallCenterFeeTable();
@@ -45,6 +45,7 @@ export default function page() {
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap '>
+                    <ButtonIcon icon={'/icons/filter.png'} />
                     <ButtonIcon icon={'/icons/pdf.png'} />
                     <ButtonIcon icon={'/icons/print.png'} />
                     <ButtonIcon icon={'/icons/copy.png'} />
@@ -61,8 +62,8 @@ export default function page() {
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap max-w-fit @xl:w-[40%] '>
-                    <Button cn={' !min-h-[55px] bg-secondery dark:bg-primary  '} name={t('search_now')} />
-                    <Button cn={' border border-gray-200 !min-h-[55px] bg-white !text-secondery   '} name={t('update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
+                    <Button cn={' !min-h-[45px] ttttt  bg-secondery dark:bg-primary  '} name={t('search_now')} />
+                    <Button cn={' border border-gray-200 !min-h-[45px] ttttt  bg-white !text-secondery   '} name={t('update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
                 </div>
             </div>
 
@@ -71,7 +72,7 @@ export default function page() {
             {/*  Fees  */}
             <div className='cShadow text-white  min-h-[100px]  bg-white p-[20px] rounded-[10px] '>
                 <Title title={t("total")}  />
-                <div className='grid @lg:grid-cols-2 @xl:grid-cols-3 @2xl:grid-cols-5 gap-[20px] '>
+                <div className='grid grid-cols-2 @xl:grid-cols-3 @2xl:grid-cols-5 gap-[20px] '>
                 {
                     cards?.map((e,i)=> (
                         <div className={` max-w-full w-full  ${i == 0 &&"bg-secondery dark:bg-primary  text-white"}  text-[#7a7a7e] dark:text-white dark:border-border1 min-h-[100px] py-[20px] p-[10px] border-[#EEEEEE] border-[.5px]  rounded-[10px] justify-between items-center inline-flex`}>

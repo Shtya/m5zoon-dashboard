@@ -28,7 +28,7 @@ export default function MultiInput({ label, KEY, cnInput , cn , place }) {
             )}
 
             {/* Input Box */}
-            <div className={`px-[10px] rounded-lg border-[1px] border-[#ececeb] dark:border-border1 duration-300  cursor-pointer w-full min-h-[55px] py-[5px] flex justify-between items-center  ${cnInput}`}>
+            <div className={`px-[10px] rounded-[6px] border-[1px] border-[#ececeb] dark:border-border1 duration-300  cursor-pointer w-full min-h-[45px] ttttt  py-[5px] flex justify-between items-center  ${cnInput}`}>
                 {/* Display selected values as tags */}
                 <div className='flex flex-wrap gap-2 flex-1  '>
                     {values.map((value, index) => (
@@ -42,7 +42,7 @@ export default function MultiInput({ label, KEY, cnInput , cn , place }) {
                 </div>
 
                 {/* Plus Button */}
-                <button onClick={handleAddValue} className=' bg-secondery dark:bg-primary text-white w-[20px] h-[20px] flex items-center justify-center rounded-[4px] '> <Plus size={15} /> </button>
+                <button onClick={handleAddValue} className=' bg-secondery dark:bg-primary text-white w-[20px] h-[20px] flex items-center justify-center rounded-[6px] '> <Plus size={15} /> </button>
             </div>
         </div>
     );

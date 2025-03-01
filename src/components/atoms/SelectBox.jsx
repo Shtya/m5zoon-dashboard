@@ -34,7 +34,7 @@ const SelectBox = ({ label , watch  , setValue , cnBtn , KEY, cn ,  data }) => {
       <div className='flex items-center gap-[30px] max-lg:gap-[15px] flex-wrap  w-full ' >
         {
           data?.map((e,i)=>(
-            <div key={i} onClick={()=> handleChange(e.value) } className={`flex-none  ${checked == e.value ? "!text-[#f5f7fd] bg-[#09396f] " : "bg-gray-50"} ${cnBtn} text-[#09396f] duration-300 border-dashed cursor-pointer  w-full max-w-[100px] h-10 p-2.5  rounded-[5px] border  justify-center items-center flex `} >
+            <div key={i} onClick={()=> handleChange(e.value) } className={`flex-none  ${checked == e.value ? "!text-[#f5f7fd] bg-[#09396f] " : "bg-gray-50"} ${cnBtn} text-[#09396f] duration-300 border-dashed cursor-pointer  w-full max-w-[100px] h-10 p-2.5  rounded-[6px] border  justify-center items-center flex `} >
               <span className='text-center  text-sm font-normal' > {e.name} </span>
             </div>
           ))

@@ -43,7 +43,7 @@ const DefaultSelect = ({cnSelect ,label , dataAos , error , trigger , watch , KE
       {label && <label htmlFor={KEY} className={`h5`} > {label} </label> }
 
       <div className='relative w-full  ' >
-        <select id="mySelect" onChange={handleValue} className={` !outline-none w-full relative appearance-none ${val?.name ? "" : " text-secondry3 "} ${cnSelect} h5 outline-none cursor-pointer border-[#BCBBBF] border-[1px] h-[45px] rounded-[8px]`} >
+        <select id="mySelect" onChange={handleValue} className={` !outline-none w-full relative appearance-none ${val?.name ? "" : " text-secondry3 "} ${cnSelect} h5 outline-none cursor-pointer border-[#BCBBBF] border-[1px] h-[45px] rounded-[6px]`} >
             <option value=""  > {place} </option>
             {data.map((e, i) => (
                 <option key={i} className=' capitalize h5 hover:text-primary1 duration-0 ' value={e?.name_en ? e[`name_${locale}`] : e?.name} > {e?.name_en ? e[`name_${locale}`] : e?.name} </option>

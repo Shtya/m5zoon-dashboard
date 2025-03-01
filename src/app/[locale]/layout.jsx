@@ -1,11 +1,4 @@
 import Layout from '@/components/templates/Layout';
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
-});
 
 
 import "./style.css"
@@ -43,7 +36,7 @@ export default function RootLayout({ children, params: { locale } }) {
     const messages = useMessages();
 
     return (
-        <html lang={locale} className={`${poppins.variable}`} dir={locale == 'en' ? 'ltr' : 'rtl'}>
+        <html lang={locale}  dir={locale == 'en' ? 'ltr' : 'rtl'}>
             <body >
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <main>

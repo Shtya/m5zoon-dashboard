@@ -153,6 +153,10 @@ html {
     width: 3px !important;
     height: 3px !important;
 }
+.scroll-select-btns::-webkit-scrollbar {
+    width: 3px !important;
+    height: 3px !important;
+}
 
 .slide-width{
   transition: .5s;

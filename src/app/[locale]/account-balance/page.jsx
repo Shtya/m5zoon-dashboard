@@ -31,7 +31,7 @@ export default function page() {
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap '>
-                    <Input cnInput={'!h-[50px]'} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search_placeholder')} icon={ <Search /> } />
+                    <Input cnInput={'!h-[45px]'} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search_placeholder')} icon={ <Search /> } />
                     <ButtonIcon icon={'/icons/replace.png'} />
                     <ButtonIcon icon={'/icons/pdf.png'} />
                     <ButtonIcon icon={'/icons/print.png'} />

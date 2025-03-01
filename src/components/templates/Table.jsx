@@ -130,7 +130,7 @@ const Table = ({setisOpenPopup , cn , head, data, onOpen, nameEditBtn , showHref
 
     return (
         <>
-            <div  className='overflow-x-auto bg-white dark:bg-bg2 rounded-lg shadow-md border-[1px] border-[#EEF0F4] dark:border-border1  '>
+            <div  className='overflow-x-auto bg-white dark:bg-bg2 rounded-[6px]  border-[1px] border-[#EEF0F4] dark:border-border1  '>
                 <table className='w-full   border-collapse'>
                     <thead>
                         <tr className='text-white text-sm w-full border-b-[1px] dark:border-border1 border-[#EEF0F4] '>
@@ -187,9 +187,9 @@ const Table = ({setisOpenPopup , cn , head, data, onOpen, nameEditBtn , showHref
                                 <tr className={`${i % 2 == 0 ? " bg-[#f7f8fa] dark:bg-bg3 " : ""} border-b-[1px] dark:border-border1 border-[#EEF0F4]`} >
                                     <td colSpan={Object.keys(product).length + 2}>
                                         <div className={` ${expandedRow === product.id ? 'max-h-[200px] opacity-100 p-[20px] ' : 'max-h-0 opacity-50'} flex items-center gap-[10px] overflow-auto duration-500 translate-x-0 ease-in-out `}>
-                                            <ButtonIcon href={showHref ?`${showHref}/${product["id"]}` : "" } icon={'/icons/eye.png'} />
-                                            <ButtonIcon href={editHref ?`${editHref}/${product["id"]}` : "" } icon={'/icons/edit.png'} />
-                                            {nameEditBtn && <Button onclick={onOpen} order={'order-[-1]'} cn={'bg-secondery dark:bg-primary '} name={nameEditBtn} icon={<Image className='flex-none' src={'/icons/plus.png'} alt='' width={25} height={25} />} />}
+                                            <ButtonIcon cn="!w-[40px] !h-[40px] " href={showHref ?`${showHref}/${product["id"]}` : "" } icon={'/icons/eye.png'} />
+                                            <ButtonIcon cn="!w-[40px] !h-[40px] " href={editHref ?`${editHref}/${product["id"]}` : "" } icon={'/icons/edit.png'} />
+                                            {nameEditBtn && <Button onclick={onOpen} order={'order-[-1]'} cn={'bg-secondery dark:bg-primary !min-h-[40px] '} name={nameEditBtn} icon={<Image className='flex-none' src={'/icons/plus.png'} alt='' width={25} height={25} />} />}
                                         </div>
                                     </td>
                                 </tr>
@@ -200,11 +200,11 @@ const Table = ({setisOpenPopup , cn , head, data, onOpen, nameEditBtn , showHref
             </div>
 
             {/* Show Image */}
-            <div className={` ${!showImg ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-screen opacity-100 backdrop-blur-[2px]'} fixed inset-0 px-[30px] flex items-center justify-center  z-[500]   `}>
+            <div className={` ${!showImg ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-screen opacity-100 backdrop-blur-[2px]'} fixed inset-0 px-[30px] flex items-center justify-center  z-[500000000]   `}>
                 <div onClick={() => setshowImg(null)} className={` ${!showImg && 'top-[-100vh] opacity-0 '}  transition-all duration-500 w-full h-full absolute left-0 top-0  opacity-70  `} style={{ background: 'rgba(0, 0, 0, 0.78)' }}></div>
                 <div onClick={() => setshowImg(null)} className={` ${!showImg && 'bottom-[-100vh] opacity-0 '}  transition-all duration-500 w-full h-full absolute left-0 bottom-0 opacity-70  `} style={{ background: 'rgba(0, 0, 0, 0.78)' }}></div>
 
-                <div className={` relative ${!showImg ? 'max-h-0 opacity-0 ' : ' opacity-100 max-h-[1000px] p-[30px] '} overflow-auto duration-500 transition-all bg-white dark:bg-bg1 rounded-lg shadow-lg mx-auto max-w-[800px] min-h-[600px] w-full relative`}>
+                <div className={` relative ${!showImg ? 'max-h-0 opacity-0 ' : ' opacity-100 max-h-[1000px] p-[30px] '} overflow-auto duration-500 transition-all bg-white dark:bg-bg1 rounded-[6px] shadow-lg mx-auto max-w-[800px] min-h-[600px] w-full relative`}>
                 <svg onClick={() => setshowImg(null)} className=' absolute top-[15px] ltr:left-[15px] rtl:right-[15px] cursor-pointer hover:shadow-lg hover:scale-95 duration-300 rounded-full ' width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle className=' dark:fill-bg4 ' cx="15" cy="15.5" r="14.5" fill="white" stroke="#818B9A"/>
                         <path className=' dark:stroke-white ' d="M11.25 19.25L18.75 11.75M11.25 11.75L15 15.5L18.75 19.25" stroke="#818B9A" strokeWidth="1.125" stroke-linecap="round" stroke-linejoin="round"/>

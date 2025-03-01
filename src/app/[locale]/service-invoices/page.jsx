@@ -48,8 +48,8 @@ export default function page() {
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap max-w-fit @xl:w-[40%] '>
-                    <Button cn={' !min-h-[55px] bg-secondery dark:bg-primary   '} name={t('search_now')} />
-                    <Button cn={' border border-gray-200 !min-h-[55px] bg-white !text-secondery   '} name={t('update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
+                    <Button cn={' !min-h-[45px] ttttt  bg-secondery dark:bg-primary   '} name={t('search_now')} />
+                    <Button cn={' border border-gray-200 !min-h-[45px] ttttt  bg-white !text-secondery   '} name={t('update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
                 </div>
             </div>
 

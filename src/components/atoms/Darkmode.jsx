@@ -33,9 +33,12 @@ export default function Darkmode() {
   return (
     <button onClick={toggleDarkMode} className="cursor-pointer rtl:ml-[10px] ltr:mr-[10px] hover:scale-[.99] " >
 		{
-			darkMode ?  <Sun className=" text-white " data-aos="zoom-out" /> : <Moon className="text-gray-500" data-aos="zoom-in" /> 
+			darkMode 
+				? <Sun   className="text-white" data-aos="zoom-out" /> 
+				: <Moon  className="text-gray-500" data-aos="zoom-in" /> 
 		}
-
     </button>
   );
 }
+
+

@@ -19,6 +19,8 @@ export default function Layout({ children }) {
     }, []);
 
     const pathname = usePathname();
+    const [isMobile, setIsMobile] = useState(false);
+
     const [isAllowed, setisAllowed] = useState(false);
     useEffect(() => {
         if (['/sign-up', '/login'].includes(pathname)) {
@@ -26,17 +28,32 @@ export default function Layout({ children }) {
         } else {
             setisAllowed(true);
         }
+
+        checkScreenWidth();
+
+        window.addEventListener('resize', checkScreenWidth);
+        return () => {
+            window.removeEventListener('resize', checkScreenWidth);
+        };
     }, [pathname]);
 
 
 
+    const checkScreenWidth = () => {
+        if (window.innerWidth <= 867) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    };
+
 
     return (
         <GlobalProvider>
-        <div className='container !px-[20px]   relative grid grid-cols-[auto,1fr] gap-[20px] '>
-            <Sidebar />
-            <main className='container-type: inline-size pt-[10px] '>
-                <div className='@container' >
+        <div className={` ${isMobile ? ' grid-cols-1 !px-[10px] ' : 'grid-cols-[auto,1fr] !px-[20px] '} container    relative grid gap-[20px] `}>
+            <Sidebar isMobile={isMobile} />
+            <main className={` ${isMobile ? " mt-[-20px] ltr:ml-[75px] rtl:mr-[75px] " : ""} container-type:inline-size pt-[10px] `}>
+                <div className='@container  ' >
                     <Navbar />
                     {children}
                 </div>

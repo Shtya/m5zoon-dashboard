@@ -41,7 +41,7 @@ const Calendar = ({watch , dataAos , reverse , cnInput , label , cnLabel , trigg
     <label data-aos={dataAos} id={KEY} className={` flex flex-col gap-[15px] relative  cursor-pointer ${classname} `}>
       {label && <label htmlFor={KEY} className={`text-[#3e4c5b] dark:text-[#fff] text-lg font-normal ${cnLabel}`} > {label} </label> }
 
-      <label  htmlFor={KEY} className={` ${cnInput} dark:bg-[#1F2A4A] rounded-lg border border-[#ececeb] dark:border-[#1F2A4A] h-[55px] flex items-center justify-between gap-[20px] w-full  cursor-pointer`}>
+      <label  htmlFor={KEY} className={` ${cnInput} dark:bg-[#1F2A4A] rounded-[6px] border border-[#ececeb] dark:border-[#1F2A4A] h-[45px]   ttttt  flex items-center justify-between gap-[20px] w-full  cursor-pointer`}>
         <span className={` flex-1   ltr:ml-[10px] rtl:mr-[10px] text-[#6b6b6b] dark:text-[#fff] text-sm font-normal`}> { currentDate || place || t("choose_time") } </span>
         <input className=" hidden absolute cursor-pointer inset-0 opacity-0  z-[-1] " id={KEY} ref={datePickerRef} type="text" />
         <CalendarDays size={20} className={`text-[#6b6b6b] dark:text-white ltr:mr-[10px] rtl:ml-[10px] ${reverse && "order-[10] "}`} />

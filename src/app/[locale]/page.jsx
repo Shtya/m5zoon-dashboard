@@ -1,25 +1,24 @@
 'use client';
 import Breadcrumb from '@/components/atoms/Breadcrumb ';
-import Button from '@/components/atoms/Button';
-import Calendar from '@/components/atoms/Calender';
 import Input from '@/components/atoms/Input';
 import Select from '@/components/atoms/Select';
 import SelectButton from '@/components/atoms/SelectButton';
 import Card from '@/components/atoms/SummaryCircle';
 import Title from '@/components/pages/common/Title';
 import AdSlider from '@/components/pages/dashboard/AdSlider';
-// import CustomPieChart from '@/components/pages/dashboard/CustomPieChart';
 import OrdersChart from '@/components/pages/dashboard/OrdersChart';
 import ProductMostSales, { AvarageCosts, DataStores } from '@/components/pages/dashboard/ProductMostSales';
 import { hookSignUp } from '@/hooks/hookSignUp';
 import { DataStoreData, FadeDateData, ProductMoreSalesData, ProductsData, socialMediaPlatforms, totalCostsData } from '@/seed';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import React from 'react';
 
 import dynamic from "next/dynamic";
 import { Search } from 'lucide-react';
 const CustomPieChart = dynamic(() => import("@/components/pages/dashboard/CustomPieChart"), { ssr: false });
+
+
+
 
 export default function page() {
     const t = useTranslations('dashboard');
@@ -41,23 +40,23 @@ export default function page() {
     ];
 
     const staticsData = [
-        { count: 101, price: 2500, value: 70, color: '#fff', secondColor: '#225d9e', title: t('statics.all_orders'), bg: 'bg-secondery' },
-        { count: 102, price: 2500, value: 80, color: '#e1c408', secondColor: '#fff4d6', title: t('statics.valid_orders') },
-        { count: 103, price: 2500, value: 60, color: '#159b3b', secondColor: '#e3ffe6', title: t('statics.confirmed_orders') },
-        { count: 104, price: 2500, value: 60, color: '#5db3b3', secondColor: '#e5f4f2', title: t('statics.delivered_orders_confirmed') },
-        { count: 105, price: 2500, value: 60, color: '#d1bc9b', secondColor: '#f1efe1', title: t('statics.delivered_orders_total') },
-        { count: 106, price: 2500, value: 60, color: '#750884', secondColor: '#f3e8fc', title: t('statics.orders_in_delivery') },
-        { count: 107, price: 2500, value: 70, color: '#702fb6', secondColor: '#f8e9ff', title: t('statics.new_order') },
-        { count: 108, price: 2500, value: 70, color: '#26a1b6', secondColor: '#e3f2ff', title: t('statics.unconfirmed_order') },
-        { count: 109, price: 2500, value: 40, color: '#ed49a9', secondColor: '#feeaf9', title: t('statics.no_response') },
-        { count: 110, price: 2500, value: 70, color: '#f9a51a', secondColor: '#ffefe3', title: t('statics.postponed') },
-        { count: 111, price: 2500, value: 70, color: '#1c5182', secondColor: '#e8e8e8', title: t('statics.awaiting_stock_renewal') },
-        { count: 112, price: 2500, value: 70, color: '#2f3ab6', secondColor: '#e3f2ff', title: t('statics.canceled_orders_under_review') },
-        { count: 113, price: 2500, value: 70, color: '#da8e5b', secondColor: '#e8f6fc', title: t('statics.canceled_order') },
-        { count: 114, price: 2500, value: 70, color: '#665663', secondColor: '#e4e4e4', title: t('statics.returned_order') },
-        { count: 115, price: 2500, value: 40, color: '#cf1d20', secondColor: '#ffe3e3', title: t('statics.out_of_delivery_zone') },
-        { count: 116, price: 2500, value: 70, color: '#ae3293', secondColor: '#f1e3ff', title: t('statics.unable_to_contact') },
-        { count: 117, price: 2500, value: 70, color: '#7cc236', secondColor: '#e3f2ff', title: t('statics.duplicate_order') },
+        { count: 101, price: 2500, value: 70, color: '#fff'   , secondColor: '#225d9e',explain: t_("all_orders") ,  title: t('statics.all_orders'), bg: 'bg-secondery' },
+        { count: 102, price: 2500, value: 80, color: '#e1c408', secondColor: '#fff4d6',explain: t_("confirmed_orders") ,  title: t('statics.valid_orders') },
+        { count: 103, price: 2500, value: 60, color: '#159b3b', secondColor: '#e3ffe6',explain: t_("customer_confirmed_orders") ,  title: t('statics.confirmed_orders') },
+        { count: 104, price: 2500, value: 60, color: '#5db3b3', secondColor: '#e5f4f2',explain: t_("delivered_orders") ,  title: t('statics.delivered_orders_confirmed') },
+        { count: 105, price: 2500, value: 60, color: '#d1bc9b', secondColor: '#f1efe1',explain: t_("delivered_orders") ,  title: t('statics.delivered_orders_total') },
+        { count: 106, price: 2500, value: 60, color: '#750884', secondColor: '#f3e8fc',explain: t_("in_transit_orders") ,  title: t('statics.orders_in_delivery') },
+        { count: 107, price: 2500, value: 70, color: '#702fb6', secondColor: '#f8e9ff',explain: t_("new_orders") ,  title: t('statics.new_order') },
+        { count: 108, price: 2500, value: 70, color: '#26a1b6', secondColor: '#e3f2ff',explain: t_("unresponsive_orders") ,  title: t('statics.unconfirmed_order') },
+        { count: 109, price: 2500, value: 40, color: '#ed49a9', secondColor: '#feeaf9',explain: t_("pending_follow_up_orders") ,  title: t('statics.no_response') },
+        { count: 110, price: 2500, value: 70, color: '#f9a51a', secondColor: '#ffefe3',explain: t_("postponed_orders") ,  title: t('statics.postponed') },
+        { count: 111, price: 2500, value: 70, color: '#1c5182', secondColor: '#e8e8e8',explain: t_("pending_restock") ,  title: t('statics.awaiting_stock_renewal') },
+        { count: 112, price: 2500, value: 70, color: '#2f3ab6', secondColor: '#e3f2ff',explain: t_("canceled_orders_pending_follow_up") ,  title: t('statics.canceled_orders_under_review') },
+        { count: 113, price: 2500, value: 70, color: '#da8e5b', secondColor: '#e8f6fc',explain: t_("canceled_orders") ,  title: t('statics.canceled_order') },
+        { count: 114, price: 2500, value: 70, color: '#665663', secondColor: '#e4e4e4',explain: t_("returns") ,  title: t('statics.returned_order') },
+        { count: 115, price: 2500, value: 40, color: '#cf1d20', secondColor: '#ffe3e3',explain: t_("out_of_delivery_range") ,  title: t('statics.out_of_delivery_zone') },
+        { count: 116, price: 2500, value: 70, color: '#ae3293', secondColor: '#f1e3ff',explain: t_("unreachable_orders") ,  title: t('statics.unable_to_contact') },
+        { count: 117, price: 2500, value: 70, color: '#7cc236', secondColor: '#e3f2ff',explain: t_("duplicate_orders") ,  title: t('statics.duplicate_order') },
     ];
 
 
@@ -91,30 +90,33 @@ export default function page() {
     return (
         <div className='mt-[20px] mb-[80px] flex flex-col gap-[20px] '>
             {/*  Name of the page  */}
-            <div className=' cShadow min-h-[100px] @max-lg:justify-center  flex-wrap bg-white p-[20px] rounded-[10px]  flex items-center justify-between gap-[10px]  '>
-                <div>
-                    <h1 className=' @max-lg:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-2xl font-normal'> {t('dashboard.control_panel')} </h1>
-                    <Breadcrumb items={breadcrumbItems} />
+            <div className=' cShadow min-h-[100px] bg-white p-[20px] rounded-[10px]  flex items-center justify-center @max-xl:flex-wrap gap-[10px]  '>
+                <div className='@xl:w-[300px] ' >
+                    <h1 className=' @max-xl:text-center text-[#0f1728] dark:text-[#fff] duration-300  text-2xl font-normal'> {t('dashboard.control_panel')} </h1>
+                    <Breadcrumb  items={breadcrumbItems} />
                 </div>
 
-                <SelectButton data={filtersData} />
+                <div className='flex  flex-wrap items-center @max-xl:justify-center justify-end gap-[13px] w-full ' >
+                    <Input cn={"max-w-[210px] w-full "} cnInput={"!h-[45px]"} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search.search_product')} icon={<Search size={18} />} />
+                    <Select cn={"max-w-[110px] w-full "} cnSelect={"!min-h-[45px]"}  KEY='city' error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={socialMediaPlatforms} place={t('search.choose_platform')} />
+                    <SelectButton data={filtersData} />
+                </div>
+
             </div>
 
 
 
             {/* Search */}
-            <div className=' cShadow @max-2xl:justify-center  min-h-[100px]  bg-white p-[20px] rounded-[10px]  flex items-end justify-between flex-wrap gap-x-[10px] gap-y-[20px]  '>
+            {/* <div className=' cShadow @max-2xl:justify-center  min-h-[100px]  bg-white p-[20px] rounded-[10px]  flex items-end justify-between flex-wrap gap-x-[10px] gap-y-[20px]  '>
                 <div className='grid grid-cols-1 @md:grid-cols-2 @xl:grid-cols-3 gap-[20px]  max-w-[1100px] w-full '>
-                    <Input KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} place={t('search.search_product')} label={t('search.search_product')} icon={<Search size={18} />} />
-                    <Select KEY='city' error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={socialMediaPlatforms} label={t('search.choose_platform')} />
                     <Calendar KEY='date' error={errors?.date} setValue={setValue} watch={watch} trigger={trigger} cnInput={"h-[50px]"} classname={'w-full'} label={t('search.choose_date')} />
                 </div>
 
                 <div className='flex items-center gap-[10px] flex-wrap max-w-fit w-full '>
-                    <Button cn={' !min-h-[55px] bg-secondery dark:bg-bg1   '} name={t('search.search_now')} />
-                    <Button cn={' border border-gray-200 !min-h-[55px] bg-white !text-secondery   '} name={t('search.update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
+                    <Button cn={' !min-h-[45px] ttttt  bg-secondery dark:bg-bg1   '} name={t('search.search_now')} />
+                    <Button cn={' border border-gray-200 !min-h-[45px] ttttt  bg-white !text-secondery   '} name={t('search.update')} icon={<Image src={'/icons/refresh.png'} alt='' width={16} height={16} />} />
                 </div>
-            </div>
+            </div> */}
 
 
 

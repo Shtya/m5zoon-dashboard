@@ -26,7 +26,7 @@ export default function page() {
             <div className='cShadow   min-h-[500px]  bg-white p-[20px] rounded-[10px] '>
                 <div className='flex flex-col gap-[30px] mt-[30px] '>
                     <Select KEY='city' cnSelect={'bg-[#f7f7f7]'} error={errors?.city} setValue={setValue} watch={watch} trigger={trigger} data={withdrawalTypes} place={withdrawalTypes[0].value} label={t('withdrawal_type')} iconSelect={'/icons/two-arrow.png'} />
-                    <Input cnInput={'!h-[50px] !bg-[#f7f7f7] !border-[#ebecee] dark:!border-[#263358] '} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t('withdrawal_balance')} />
+                    <Input cnInput={'!h-[45px] !bg-[#f7f7f7] !border-[#ebecee] dark:!border-[#263358] '} KEY={'first_name'} error={errors?.first_name} type={'text'} register={register('first_name')} label={t('withdrawal_balance')} />
                 </div>
             </div>
         </div>

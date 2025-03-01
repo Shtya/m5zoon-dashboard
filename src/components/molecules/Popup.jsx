@@ -2,15 +2,15 @@
 import { useState } from 'react';
 import Title from '../pages/common/Title';
 
-const Popup = ({ content, isOpen, onClose, title }) => {
+const Popup = ({ content, isOpen, onClose, title , cn }) => {
     // if (!isOpen) return null; // Hide popup when closed
 
     return (
-        <div className={` ${!isOpen ? " pointer-events-none" : "backdrop-blur-[2px]" } fixed inset-0 px-[30px] flex items-center justify-center  z-[500]   `} >
+        <div className={` ${!isOpen ? " pointer-events-none" : "backdrop-blur-[2px]" } fixed inset-0 px-[30px] flex items-center justify-center  z-[50000000000000000000]   `} >
             <div onClick={onClose} className={` ${!isOpen && "top-[-100vh] opacity-0 "}  transition-all duration-500 w-full h-full absolute left-0 top-0  opacity-70  `} style={{background : "rgba(0, 0, 0, 0.78)" }} ></div>
             <div onClick={onClose} className={` ${!isOpen && "bottom-[-100vh] opacity-0 "}  transition-all duration-500 w-full h-full absolute left-0 bottom-0 opacity-70  `} style={{background : "rgba(0, 0, 0, 0.78)" }} ></div>
 			
-			<div className={` ${!isOpen ? "max-h-0 opacity-0 " : " opacity-100 max-h-[1000px] p-[30px] "} overflow-auto duration-500 transition-all bg-white  dark:bg-bg1 rounded-lg shadow-lg mx-auto max-w-[800px] w-full relative`}>
+			<div className={` ${!isOpen ? "max-h-0 opacity-0 " : " opacity-100 max-h-[1000px] p-[30px] "} overflow-auto duration-500 transition-all bg-white  dark:bg-bg1 rounded-[6px] shadow-lg mx-auto max-w-[800px] w-full relative ${cn} `}>
                 {/* Close Button */}
 				<div className=" flex items-center justify-between mb-[30px] ">
 					<Title title={title} cn={"!m-0"} />
